@@ -82,3 +82,76 @@ connector with label-management scope, then label them manually or re-run).
 **Also flagged:** a stray test draft ("test draft - please ignore", thread
 `19f41c4d25872fd5`) was created while probing the Gmail connection issue above and
 could not be trashed due to the same scope error — delete it manually from Drafts.
+
+---
+
+## 2026-07-12
+
+**Search window:** last 48 hours (2026-07-10 ~10:06 IST → 2026-07-12 ~06:06 IST)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`,
+`jobs-noreply@linkedin.com`) and Naukri (`naukri.com`, subject "job alert" /
+"recommended jobs" / "jobs for you"). **No Naukri job-alert emails were found in this
+window** (checked out to a 3-day window as a sanity check — still zero). All 20 ranked
+jobs below come from LinkedIn job alert digests and reminder emails.
+
+Raw emails scanned: 11 LinkedIn threads (13 messages) in the window — a mix of job-alert
+digests, a "similar jobs" recommendation digest, and "saved job" apply reminders. Two
+threads were pure application-confirmation emails ("Your application to ... at Callaway
+Digital Technologies", "... at Recykal.com") and were excluded as non-alerts. Parsing the
+remaining threads yielded 62 unique job postings (by LinkedIn job ID), which collapsed to
+59 after deduping by Company + Role (AVP Vigilant Technology's "AI/ML Engineer" and
+American Express's "Analyst-Data Science" each appeared as separate postings in two
+different cities and were merged).
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | Analyst-Data Science | American Express | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4415686962) |
+| 2 | Applied Data Scientist | dunnhumby | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437748079) |
+| 3 | Machine Learning Engineer | Helfie.AI | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4433935249) |
+| 4 | Machine Learning Engineer | S&P Global | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4434607893) |
+| 5 | Deputy Manager - Data Science | PepsiCo | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4390003782) |
+| 6 | AI/ML Developer (Toll industry) | MG | Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437092390) |
+| 7 | Associate AI/ML Engineer – Predictive Maintenance | Boeing | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4435943294) |
+| 8 | Applied Data Scientist — Medical AI & Model Fine Tuning | Clinvvo | Greater Bengaluru Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4435976099) |
+| 9 | Machine Learning Engineer | Spydra | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4435980095) |
+| 10 | Applied AI Engineer | Clueso | Greater Bengaluru Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437379737) |
+| 11 | Backend Engineer (Node.js/NestJS + AI Agents) | Eazybe | New Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437351831) |
+| 12 | AI Engineer (Computer Vision & Deep Learning) | Tesselonix Private Limited | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437370579) |
+| 13 | Quantitative Developer (Python) | Open Futures Group | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437962673) |
+| 14 | Forward Deployed Engineer - Gen AI & Voice AI (Backend Engineer) - Delhi | Blue Machines AI | Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4438886777) |
+| 15 | Artificial Intelligence Engineer | SKV (Studiokon Ventures Private Limited) | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439000797) |
+| 16 | AI/ML Engineer ⚠️ consulting | EXL | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4434892560) |
+| 17 | AI / ML Engineer ⚠️ consulting | Accenture in India | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4438282279) |
+| 18 | ML Engineer | Clean Harbors | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4423595925) |
+| 19 | Adv. Data Scientist II, SIP | Invesco | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4438665939) |
+| 20 | Associate AI/ML Engineer | Optum India | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439044122) |
+
+⚠️ **Consulting/body-shop roles flagged in this batch (skip fast unless desperate):**
+EXL (#16), Accenture in India (#17). Also present in the wider 59-job pool but ranked
+outside the top 20: Quanteon Solutions, ARNsofttech, Jade Global, Maganti IT Resources
+LLC, Viraaj HR Solutions, AVP Vigilant Technology, VLink Inc, UST, Adept Global, Axtria -
+Ingenious Insights, SourcingXPress, Happiest Minds Technologies, Teamware Solutions,
+Asian Hires, Innova ESI, and EXL's second posting (Senior Manager) — all scored down via
+the company-type sub-score (2/5) for being staffing/IT-services/BPO shops.
+
+### Top 5 companies → cold outreach drafts
+
+Drafts were created in Gmail (not sent) for the top 5 *distinct* companies from the
+ranked list: **American Express, dunnhumby, Helfie.AI, S&P Global, PepsiCo**.
+
+| Company | Role targeted | Draft subject | Recipient in draft |
+|---|---|---|---|
+| American Express | Analyst-Data Science | ML Engineer - Suryatej Lalam - American Express | `recruiter@americanexpress.com` (placeholder — replace with a real recruiter's address before sending) |
+| dunnhumby | Applied Data Scientist | ML Engineer - Suryatej Lalam - dunnhumby | `recruiter@dunnhumby.com` (placeholder — replace before sending) |
+| Helfie.AI | Machine Learning Engineer | ML Engineer - Suryatej Lalam - Helfie.AI | `talent@helfie.ai` (placeholder — unverified domain, replace before sending) |
+| S&P Global | Machine Learning Engineer | ML Engineer - Suryatej Lalam - S&P Global | `recruiter@spglobal.com` (placeholder — replace before sending) |
+| PepsiCo | Deputy Manager - Data Science | ML Engineer - Suryatej Lalam - PepsiCo | `talent@pepsico.com` (placeholder — replace before sending) |
+
+**Note on labeling:** same limitation as the 2026-07-08 run — `create_label` for
+`job-outreach` failed with a token/scope re-authorization error, even though reading
+existing labels (`list_labels`) and creating drafts both work fine. The label still does
+not exist in the mailbox. Find the 5 drafts by subject prefix `ML Engineer - Suryatej
+Lalam -` in Gmail Drafts until this is resolved (re-authorize the Gmail connector with
+label-management scope, then label them manually or re-run this step).
