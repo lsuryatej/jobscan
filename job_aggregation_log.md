@@ -82,3 +82,82 @@ connector with label-management scope, then label them manually or re-run).
 **Also flagged:** a stray test draft ("test draft - please ignore", thread
 `19f41c4d25872fd5`) was created while probing the Gmail connection issue above and
 could not be trashed due to the same scope error — delete it manually from Drafts.
+
+---
+
+## 2026-07-14
+
+**Search window:** last 48 hours (2026-07-12 04:37 → 2026-07-14 01:36)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`,
+`jobs-noreply@linkedin.com`) and Naukri (`naukri.com`, subject "job alert" /
+"recommended jobs"). **No Naukri job-alert emails were found in this window** —
+same as the prior run. All 20 ranked jobs below come from LinkedIn job alert
+digests and recommendation emails.
+
+Raw emails scanned: 11 LinkedIn emails (2 "jobs you may be interested in" /
+saved-job-reminder emails, 9 job-alert digest emails, one digest duplicated across
+two alert triggers). Excluded as non-job-alert content: 2 LinkedIn engagement
+emails ("X reacted to this post") and 1 newsletter email. Yielded 56 unique job
+postings (deduped by Company + Role) after filtering.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | Machine Learning Engineer | Opniscience | Gurgaon | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439599070) |
+| 2 | Research Engineer - Applied AI/ML | ixigo | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439061772) |
+| 3 | Software Development Engineer -AI | Airtel Payments Bank | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439052557) |
+| 4 | AI/ML Engineer -Tech Lead | State Street | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437133714) |
+| 5 | Machine Learning Engineer | Helfie.AI | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4433935249) |
+| 6 | Associate Data Scientist | TriNet | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437174315) |
+| 7 | Data Science Associate | The Depository Trust & Clearing Corporation (DTCC) | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439046946) |
+| 8 | Junior Data Scientist | UPSTA Analytics | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439562311) |
+| 9 | Applied Scientist, Traffic Quality | Amazon | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4431162871) |
+| 10 | Data Scientist | XCaliber Health | Bengaluru East | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439579576) |
+| 11 | Applied Scientist II, FinAuto | Amazon | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4420937427) |
+| 12 | Applied Scientist I | Amazon Science | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4412834723) |
+| 13 | Deputy Manager - Data Science | PepsiCo | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4390003782) |
+| 14 | Analyst-Data Analytics (Python, SQL, Gen AI) | American Express | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437978853) |
+| 15 | Applied Scientist I, Alexa Ads | Amazon Science | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4436624922) |
+| 16 | AI Engineer | Nomia Ltd | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4435970494) |
+| 17 | Data Scientist | Applix | Greater Bengaluru Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4438308421) |
+| 18 | Applied Scientist, Amazon Core Search | Amazon Science | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4436630903) |
+| 19 | Clinical Prompt Engineer | Truveta | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4411352864) |
+| 20 | Associate – AI/ML Innovation Engineer | Amgen | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4436740658) |
+
+No consulting/body-shop roles landed in this run's top 20 — all 20 are product
+companies, fintechs, startups, or GCCs of non-consulting firms. Consulting/
+staffing/outsourcing postings present in the wider 56-job pool but ranked outside
+the top 20 (skip fast unless desperate): Luxoft, Deloitte, Accenture in India,
+Accenture services Pvt Ltd, Infosys (×2 postings), EXL (×2), UST (×4 postings,
+incl. MLOps Engineer and AI Engineer), Maganti IT Resources, Talent500, Jobs
+Opportunity (×3 — generic recruiter-posted listings), Tech Economy (×2), ANSR,
+RZR, and CloudSutra/Technoidentity Careers.
+
+### Top 5 companies → cold outreach drafts
+
+Drafts were created in Gmail (not sent) for the top 5 *distinct* companies from
+the ranked list: **Opniscience, ixigo, Airtel Payments Bank, State Street,
+Helfie.AI**.
+
+| Company | Role targeted | Draft subject | Recipient in draft |
+|---|---|---|---|
+| Opniscience | Machine Learning Engineer | ML Engineer - Suryatej - Opniscience | `careers@opniscience.com` (placeholder — unverified domain, replace before sending) |
+| ixigo | Research Engineer - Applied AI/ML | ML Engineer - Suryatej - ixigo | `careers@ixigo.com` (placeholder — replace with a real recruiter's address before sending) |
+| Airtel Payments Bank | Software Development Engineer -AI | ML Engineer - Suryatej - Airtel Payments Bank | `careers@airtelbank.com` (placeholder — replace before sending) |
+| State Street | AI/ML Engineer -Tech Lead | ML Engineer - Suryatej - State Street | `recruiting@statestreet.com` (placeholder — replace before sending) |
+| Helfie.AI | Machine Learning Engineer | ML Engineer - Suryatej - Helfie.AI | `careers@helfie.ai` (placeholder — replace before sending) |
+
+**Note on labeling:** the `job-outreach` Gmail label still could not be
+created/applied this run — the connected Gmail account's OAuth grant allows
+creating drafts but returns a 403/"requires re-authorization" error on any label
+read-write operation (`create_label`, `label_message`, `apply_sensitive_message_label`).
+This is the same unresolved issue flagged in the 2026-07-08 run. Find the 5 drafts
+by subject prefix `ML Engineer - Suryatej -` in Gmail Drafts until the Gmail
+connector is re-authorized with label-management scope (via claude.ai connector
+settings), then label them manually or re-run.
+
+**Also flagged:** a stray test draft ("TEST DRAFT - please ignore", id
+`r-3635200928529874289`) was created while probing the Gmail label-scope issue
+above and could not be trashed due to the same scope error — delete it manually
+from Drafts.
