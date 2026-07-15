@@ -525,3 +525,73 @@ prior run. Find outreach drafts by subject prefix `ML Engineer - Suryatej -`
 in Gmail Drafts until the Gmail connector is re-authorized (via claude.ai
 connector settings), then label them manually or re-run.
 
+
+## 2026-07-15
+
+**Search window:** last 48 hours (2026-07-13 07:10 → 2026-07-15 07:10 IST)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`,
+`jobs-noreply@linkedin.com`) and Naukri (`naukri.com`, subject "job alert" /
+"recommended jobs"). **No Naukri job-alert emails were found in this window** —
+same as every prior run; this inbox does not appear to receive Naukri alerts.
+All 20 ranked jobs below come from LinkedIn job alert digests and recommendation
+emails.
+
+Raw emails scanned: 9 relevant LinkedIn threads (one thread had 2 alert
+triggers with the same job card, deduped), covering job-alert digests, "jobs
+that match your profile" recommendations, and a "similar jobs" email.
+Excluded as non-job-alert content: 1 weekly-performance notification, 1
+engagement email ("X reacted to this post"), and 1 editorial newsletter email.
+Yielded 44 unique job postings (deduped by Company + Role) after filtering.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | Machine Learning Engineer | Opniscience | Gurgaon | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439599070) |
+| 2 | Jr ML Engineer | Baseforge Technologies | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439144232) |
+| 3 | Associate Data Engineer/Scientist | Barri Financial Group | Bangalore Urban | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437214732) |
+| 4 | Generative AI Engineer (RAG) | NextMantra AI | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437243970) |
+| 5 | AI Research Engineer - Applied AI | PlexTrac | Greater Bengaluru Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4417039358) |
+| 6 | Data Scientist | XCaliber Health | Bengaluru East | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439579576) |
+| 7 | Applied Scientist, Traffic Quality | Amazon | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4431162871) |
+| 8 | Applied Scientist II, FinAuto | Amazon | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4420937427) |
+| 9 | AI Software Engineer — Remote | Pluvus | India (Remote) | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437942804) |
+| 10 | AI Engineer II (Remote) | Sezzle | India (Remote) | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4378063866) |
+| 11 | Associate - AI/ML Innovation Engineer | Amgen | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4436754165) |
+| 12 | Engineer - ML tools | Qualcomm | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4386878569) |
+| 13 | Engineer I, AI Engineering | LPL Financial Global Capability Center | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4371020579) |
+| 14 | AI/ML Engineer ⚠️ consulting | Blend Consulting & Training India Pvt. Ltd. | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437556949) |
+| 15 | Platform Engineer | XCaliber Health | Bengaluru East | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439584280) |
+| 16 | Software Engineer, AI/ML | Google | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4390913792) |
+| 17 | AI Engineer - 1 | GTMfund | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439784227) |
+| 18 | Applied AI Engineer | BJAK | India | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437971362) |
+| 19 | Machine Learning Engineer | Shuru | India | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437137985) |
+| 20 | Data Scientist | Euromonitor International | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439147979) |
+
+Only one consulting/staffing posting landed in this run's top 20: Blend
+Consulting & Training India Pvt. Ltd. (#14, flagged above — skip fast). More
+consulting/staffing/outsourcing postings are present in the wider 44-job pool
+but ranked outside the top 20 (skip fast unless desperate): PwC India
+(Advisory), Luxoft, Accenture in India, IQVIA, Automatic Infotech, Capgemini,
+Maganti IT Resources LLC, Deloitte, Talent500, and Infosys.
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score: **Opniscience, Baseforge Technologies, Barri Financial Group,
+NextMantra AI, PlexTrac.** All five are newly created drafts this run (no
+prior drafts existed for these exact company + role pairs).
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| Opniscience | Machine Learning Engineer | ML Engineer - Suryatej Lalam - Opniscience | `careers@opniscience.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Baseforge Technologies | Jr ML Engineer | ML Engineer - Suryatej Lalam - Baseforge Technologies | `careers@baseforge.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Barri Financial Group | Associate Data Engineer/Scientist | ML Engineer - Suryatej Lalam - Barri Financial Group | `careers@barrifinancial.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| NextMantra AI | Generative AI Engineer (RAG) | ML Engineer - Suryatej Lalam - NextMantra AI | `careers@nextmantra.ai` (placeholder — unverified, replace before sending) | new draft created this run |
+| PlexTrac | AI Research Engineer - Applied AI | ML Engineer - Suryatej Lalam - PlexTrac | `careers@plextrac.com` (placeholder — unverified, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` Gmail label still could not be
+created this run — `create_label` fails with "MCP server Gmail requires
+re-authorization (token expired)", the same unresolved issue flagged in every
+prior run. Find outreach drafts by subject prefix `ML Engineer - Suryatej
+Lalam -` in Gmail Drafts until the Gmail connector is re-authorized (via
+claude.ai connector settings), then label them manually or re-run.
