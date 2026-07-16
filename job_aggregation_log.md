@@ -595,3 +595,79 @@ re-authorization (token expired)", the same unresolved issue flagged in every
 prior run. Find outreach drafts by subject prefix `ML Engineer - Suryatej
 Lalam -` in Gmail Drafts until the Gmail connector is re-authorized (via
 claude.ai connector settings), then label them manually or re-run.
+
+## 2026-07-16
+
+**Search window:** last 48 hours (2026-07-14 02:37 → 2026-07-15 21:14 UTC)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`,
+`jobs-noreply@linkedin.com`) and Naukri (`naukri.com`, subject "job alert" /
+"recommended jobs"). **No Naukri job-alert emails were found in this window** —
+same as every prior run; this inbox does not appear to receive Naukri alerts.
+All jobs below come from LinkedIn job-alert digests, "jobs that match your
+profile" recommendations, and "similar jobs" emails.
+
+Raw emails scanned: 15 threads matching the search; 11 were job-alert/job-card
+content (some with 2+ job cards each), 4 were excluded as non-job-alert content
+(a LinkedIn creator-tips newsletter, a "reacted to your post" notification, a
+"weekly performance" notification, and one duplicate ML Ops Engineer alert
+resend). Yielded 63 unique job postings (deduped by Company + Role, collapsing
+several jobs that appeared in 3+ separate digest emails) after filtering.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | Applied Data Scientist | dunnhumby | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437748079) |
+| 2 | Agentic AI Developer | BuyBuildSell InfraTech | New Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4435799678) |
+| 3 | Lead, Data Scientist | Tech Economy | Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439416750) |
+| 4 | ML Ops Engineer | Sirion | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440051417) |
+| 5 | Senior AI Engineer – EEG Cognitive Scoring Systems | Basil Health AI | Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437274769) |
+| 6 | Generative AI Engineer (RAG) | NextMantra AI | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437243970) |
+| 7 | Machine Learning Specialist | Awign | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437259503) |
+| 8 | Jr ML Engineer | Baseforge Technologies | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439144232) |
+| 9 | AI Engineer II (Remote) | Sezzle | India (Remote) | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4378063866) |
+| 10 | AI Software Engineer — Remote | Pluvus | India (Remote) | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437942804) |
+| 11 | Associate Data Scientist - Enterprise & Reporting | Circle K | Gurgaon | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4436529087) |
+| 12 | Associate Data Scientist | Fluor Corporation | Gurgaon | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440048197) |
+| 13 | Associate - Data Scientist | United Airlines India Knowledge Center | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437425413) |
+| 14 | Data Scientist | Gartner | Gurgaon | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437053720) |
+| 15 | Quantitative Data Scientist (Python), MASS, Associate | BlackRock | Gurgaon | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4422999517) |
+| 16 | Junior Data Scientist | Bandhan Technologies | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439171103) |
+| 17 | Senior Associate -Applied AI ML -Digital | hackajob | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439832559) |
+| 18 | Software Engineer, AI/ML | Google | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4390913792) |
+| 19 | AI Engineer - 1 | GTMfund | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439784227) |
+| 20 | AI Research Engineer - Applied AI | PlexTrac | Greater Bengaluru Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4417039358) |
+
+No consulting/staffing postings landed in the top 20 this run. Consulting/IT-services/
+staffing/BPO postings present in the wider 63-job pool but ranked outside the top 20
+(skip fast unless desperate): Bain & Company (x2 roles, Gurugram), Axtria - Ingenious
+Insights, DXC Technology, GlobalLogic, VLink Inc, Tata Consultancy Services, CG-VAK
+Software & Exports Ltd., CGI, Blend Consulting & Training India Pvt. Ltd., PwC India,
+Accenture in India, Luxoft, r3 Consultant, IQVIA, Automatic Infotech, Morae, and
+ValueMomentum.
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score: **dunnhumby, Sirion, Tech Economy, NextMantra AI, Basil Health AI.**
+(Six companies tied at the top score of 15 — dunnhumby, BuyBuildSell InfraTech, Tech
+Economy, Sirion, Basil Health AI, and NextMantra AI — the exact-title matches to
+"Data Scientist"/"MLOps Engineer" plus the clearer company profiles were prioritized
+over BuyBuildSell InfraTech to fill the 5 slots.) All five are newly created drafts
+this run (no prior drafts existed for these exact company + role pairs).
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| dunnhumby | Applied Data Scientist | ML Engineer - Suryatej Lalam - dunnhumby | `careers@dunnhumby.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Sirion | ML Ops Engineer | ML Engineer - Suryatej Lalam - Sirion | `careers@sirion.ai` (placeholder — unverified, replace before sending) | new draft created this run |
+| Tech Economy | Lead, Data Scientist | ML Engineer - Suryatej Lalam - Tech Economy | `careers@techeconomy.co` (placeholder — unverified, replace before sending) | new draft created this run |
+| NextMantra AI | Generative AI Engineer (RAG) | ML Engineer - Suryatej Lalam - NextMantra AI | `careers@nextmantra.ai` (placeholder — unverified, replace before sending) | new draft created this run |
+| Basil Health AI | Senior AI Engineer – EEG Cognitive Scoring Systems | ML Engineer - Suryatej Lalam - Basil Health AI | `careers@basilhealth.ai` (placeholder — unverified, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` Gmail label still could not be
+created this run — `create_label` fails with "MCP server Gmail requires
+re-authorization (token expired)", the same unresolved issue flagged in every
+prior run. Drafts themselves were created successfully (that operation does
+not hit the same auth wall). Find outreach drafts by subject prefix `ML
+Engineer - Suryatej Lalam -` in Gmail Drafts until the Gmail connector is
+re-authorized (via claude.ai connector settings), then label them manually or
+re-run.
