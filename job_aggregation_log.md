@@ -671,3 +671,90 @@ not hit the same auth wall). Find outreach drafts by subject prefix `ML
 Engineer - Suryatej Lalam -` in Gmail Drafts until the Gmail connector is
 re-authorized (via claude.ai connector settings), then label them manually or
 re-run.
+
+## 2026-07-17
+
+**Search window:** last 48 hours (2026-07-15 04:37 → 2026-07-16 12:37 UTC)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`,
+`jobs-noreply@linkedin.com`) and Naukri (`naukri.com`, subject "job alert" /
+"recommended jobs"). **No Naukri job-alert emails were found in this window** —
+same as every prior run; this inbox does not appear to receive Naukri alerts.
+All jobs below come from LinkedIn job-alert digests, "jobs picked for you"
+recommendations, and "similar jobs" emails.
+
+Raw emails scanned: 13 threads matching the search; 11 were job-alert/job-card
+content (two of which contained a duplicate resend of the same alert), 2 were
+excluded as non-job-alert content (a LinkedIn creator-tips newsletter and a
+"reacted to your post" notification). Yielded 55 unique job postings (deduped
+by Company + Role, collapsing jobs that appeared in 2-3 separate digest
+emails) after filtering, from 72 raw postings extracted.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | ML Ops Engineer | Sirion | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440051417) |
+| 2 | Applied Data Scientist | dunnhumby | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437748079) |
+| 3 | Quantitative Data Scientist (Python), MASS, Associate | BlackRock | Gurgaon | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4422999517) |
+| 4 | Associate Data Scientist - Enterprise & Reporting | Circle K | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4436529087) |
+| 5 | AI Engineer | Honasa Consumer Ltd. | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4438047826) |
+| 6 | Data Scientist | Policybazaar.com | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4438059953) |
+| 7 | Analyst - Data Scientist Machine Learning | United Airlines India Knowledge Center | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440968123) |
+| 8 | Associate - Data Scientist | United Airlines India Knowledge Center | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437425413) |
+| 9 | Lead, Data Scientist | Tech Economy | Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439416750) |
+| 10 | Data Scientist 1 | FedEx | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4421621787) |
+| 11 | Applied AI ML Associate Senior | JPMorganChase | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440319524) |
+| 12 | AI/ML Engineer | Trufe | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440964174) |
+| 13 | AI/ML Engineer - Tech Lead | State Street | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4435352155) |
+| 14 | Machine Learning Engineer | Fox Corporation | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4371494140) |
+| 15 | Senior Associate -Applied AI ML -Digital | hackajob | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439832559) |
+| 16 | AI Engineer | Kuku | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440217089) |
+| 17 | AI/ML Engineer | Noora Health | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4433827168) |
+| 18 | Associate AI/ML Engineer | Optum India | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440889832) |
+| 19 | Junior AI Engineer | PranaTree | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440949620) |
+| 20 | Data Scientist | Societe Generale Global Solution Centre | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4381462915) |
+
+No consulting/staffing postings landed in the top 20 this run. Consulting/IT-services/
+staffing/BPO postings present in the wider 55-job pool but ranked outside the top 20
+(skip fast unless desperate): Recro (x2 roles), Accenture in India (x2 roles), Bain &
+Company, CodeVyasa, Fluor Corporation, Gartner, r3 Consultant, DXC Technology,
+GlobalLogic, Indium, Tata Consultancy Services, VLink Inc, ValueMomentum, Axtria -
+Ingenious Insights, Bandhan Technologies, CG-VAK Software & Exports Ltd., CGI,
+Crescendo Global, Morae, Birlasoft, and IBM.
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score: **Sirion, dunnhumby, BlackRock, Circle K, Honasa Consumer Ltd.**
+(Nine postings tied at the top score of 15, spanning 8 unique companies — Sirion,
+dunnhumby, BlackRock, Circle K, Honasa Consumer Ltd., Policybazaar.com, United
+Airlines India Knowledge Center, and Tech Economy. Tie broken by exact-title
+precision to the target role — Sirion's "ML Ops Engineer" and dunnhumby's "Applied
+Data Scientist" contain literal role-fit keywords so they were ranked first; Tech
+Economy's "Lead, Data Scientist" was penalized for a seniority mismatch against a
+2-YOE profile; remaining ties broken alphabetically, filling out BlackRock, Circle K,
+and Honasa Consumer Ltd.) All five are newly created drafts this run (no prior
+drafts existed for these exact company + role pairs).
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| Sirion | ML Ops Engineer | ML Engineer - Suryatej Lalam - Sirion | `careers@sirion.ai` (placeholder — unverified, replace before sending) | new draft created this run |
+| dunnhumby | Applied Data Scientist | ML Engineer - Suryatej Lalam - dunnhumby | `careers@dunnhumby.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| BlackRock | Quantitative Data Scientist (MASS), Associate | ML Engineer - Suryatej Lalam - BlackRock | `careers@blackrock.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Circle K | Associate Data Scientist - Enterprise & Reporting | ML Engineer - Suryatej Lalam - Circle K | `careers@circlek.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Honasa Consumer Ltd. | AI Engineer | ML Engineer - Suryatej Lalam - Honasa Consumer Ltd. | `careers@honasa.in` (placeholder — unverified, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` Gmail label still could not be
+created this run — `create_label` fails with "MCP server Gmail requires
+re-authorization (token expired)" / a 403 on upscoping, the same unresolved
+issue flagged in every prior run. Drafts themselves were created successfully
+(that operation does not hit the same auth wall). Find outreach drafts by
+subject prefix `ML Engineer - Suryatej Lalam -` in Gmail Drafts until the
+Gmail connector is re-authorized (via claude.ai connector settings), then
+label them manually or re-run.
+
+**Stray draft to delete manually:** while verifying `create_draft` still
+worked after the label-creation failure, a throwaway test draft was created
+with subject `ML Engineer - Suryatej Lalam - Sirion` and body `Test` (draft id
+`r-7907743281550763921`). No delete-draft tool is available in this session —
+please delete that one draft by hand; the real Sirion draft (with full body
+text, listed above) is a separate, later-created draft and is correct.
