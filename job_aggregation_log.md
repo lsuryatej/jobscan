@@ -758,3 +758,84 @@ with subject `ML Engineer - Suryatej Lalam - Sirion` and body `Test` (draft id
 `r-7907743281550763921`). No delete-draft tool is available in this session —
 please delete that one draft by hand; the real Sirion draft (with full body
 text, listed above) is a separate, later-created draft and is correct.
+
+## 2026-07-18
+
+**Search window:** last 48 hours (2026-07-16 12:37 IST → 2026-07-18 IST)
+**Sources searched:** LinkedIn job alert digest emails (`jobalerts-noreply@linkedin.com`)
+and LinkedIn recommendation emails (`jobs-noreply@linkedin.com`, "New jobs similar to...")
+and Naukri (`naukri.com`, subject "job alert" / "recommended jobs"). **No Naukri
+job-alert emails were found in this window at all** — the connected inbox does not
+appear to receive Naukri alerts currently, consistent with every prior run. All jobs
+below come from LinkedIn. LinkedIn "your application was sent to X" / "application
+viewed" transactional notifications were excluded — only alert-digest and
+recommendation emails were parsed.
+
+Raw emails scanned: 9 LinkedIn job-alert digest threads (`jobalerts-noreply@linkedin.com`)
+plus 2 "New jobs similar to..." / "picked for you" recommendation emails
+(`jobs-noreply@linkedin.com`), yielding 79 job postings extracted from HTML card
+markup, reduced to 50 unique postings after deduping by Company + Role. Many postings
+(Kuku, Recro, Kotak Mahindra Bank, Optum India, Trufe, Qualcomm) recurred across
+multiple alert emails in the window and were merged into single entries.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | Data Scientist | Policybazaar.com | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4438059953) |
+| 2 | AI/ML Engineer | Trufe | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440964174) |
+| 3 | Machine Learning Engineer II (Data & Audience Platform Team) | Warner Bros. Discovery | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4429039909) |
+| 4 | MLOps Engineer | Spydra | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4424749059) |
+| 5 | AI Engineer | Honasa Consumer Ltd. | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4438047826) |
+| 6 | AI/ML Engineer | Noora Health | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4433827168) |
+| 7 | Analyst - Data Scientist Machine Learning | United Airlines India Knowledge Center | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440968123) |
+| 8 | Applied Scientist I, Ads Trust | Amazon | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441284756) |
+| 9 | Backend + AI Engineer | Feather | Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440600968) |
+| 10 | Data Scientist | Kotak Mahindra Bank | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4438470989) |
+| 11 | Data Scientist 1, Knowledge Management | eBay | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4438418977) |
+| 12 | Machine Learning Engineer | Augury | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4422472372) |
+| 13 | Senior Software Engineer (AI Applications) | AlphaSense | Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4393960645) |
+| 14 | AI / ML Engineer ⚠️ consulting | Accenture in India | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440862592) |
+| 15 | AI/ML Engineer ⚠️ consulting | Recro | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440227020) |
+| 16 | Associate Data Engineer/Scientist | Barri Financial Group | Bangalore (Remote) | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437692813) |
+| 17 | Associate Machine Learning Engineer | Amgen | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4421621787) |
+| 18 | Data Scientist 1 | FedEx | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4434833080) |
+| 19 | Data Scientist, Digital Products | US Pharmacopeia | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4413455175) |
+| 20 | Engineer/Associate Engineer - AI Platform | Qualcomm | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4406878077) |
+
+⚠️ **Consulting/body-shop roles flagged in top 20 (skip fast unless desperate):**
+Accenture in India (#14), Recro (#15). Also present in the wider 50-job pool but
+ranked outside the top 20 — skip these too: Recro (MLOps Engineer, 2nd listing),
+CodeVyasa, ARNsofttech, Indium, UST, EXL, NexGen Tech Solutions, Impetus /
+Impetus Technologies (GCP GenAI Engineer, x2 listings), Crescendo Global,
+Soothsayer Analytics, algoleap.
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score: **Policybazaar.com, Trufe, Warner Bros. Discovery, Spydra, Noora
+Health.** Ranked #1-4 are unambiguous distinct companies. #5 by score was Honasa
+Consumer Ltd. (AI Engineer, jobid 4438047826) — but that is the *same* posting
+already drafted yesterday (2026-07-17, draft `r-1553509631058808424` to
+`careers@honasa.in`), so it was skipped to avoid a duplicate outreach email and
+Noora Health (#6, AI/ML Engineer) was drafted instead to keep the slate at 5
+distinct, not-yet-contacted companies.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| Policybazaar.com | Data Scientist | ML Engineer - Suryatej Lalam - Policybazaar.com | `careers@policybazaar.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Trufe | AI/ML Engineer | ML Engineer - Suryatej Lalam - Trufe | `careers@trufe.ai` (placeholder — domain unverified, replace before sending) | new draft created this run |
+| Warner Bros. Discovery | Machine Learning Engineer II | ML Engineer - Suryatej Lalam - Warner Bros. Discovery | `careers@wbd.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Spydra | MLOps Engineer | ML Engineer - Suryatej Lalam - Spydra | `careers@spydra.app` (placeholder — domain unverified, replace before sending) | new draft created this run |
+| Noora Health | AI/ML Engineer | ML Engineer - Suryatej Lalam - Noora Health | `careers@noorahealth.org` (placeholder — unverified, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` Gmail label still could not be created
+this run — `create_label` failed with "MCP server Gmail requires re-authorization
+(token expired)", the same unresolved issue flagged in every prior run. Immediately
+after, the session's Gmail connection was flagged as needing re-authorization
+entirely. Draft creation itself completed successfully before that (all 5 drafts
+above were created), consistent with the pattern in prior runs where drafting
+works but label management does not. Find today's outreach drafts by subject
+prefix `ML Engineer - Suryatej Lalam -` in Gmail Drafts until the Gmail connector
+is re-authorized (via claude.ai connector settings), then label them manually or
+re-run. **Action needed from user:** please re-authorize the Gmail connector — this
+has now blocked label creation for 4+ consecutive daily runs.
