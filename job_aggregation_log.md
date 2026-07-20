@@ -921,3 +921,97 @@ outreach drafts by subject prefix `ML Engineer - Suryatej Lalam -` in Gmail Draf
 the Gmail connector is re-authorized, then label them manually or re-run. **Action needed
 from user:** please re-authorize the Gmail connector via claude.ai connector settings —
 this has now blocked label creation for 5+ consecutive daily runs.
+
+## 2026-07-20
+
+**Search window:** last 48 hours (2026-07-18 04:36 IST → 2026-07-19 18:06 IST)
+**Sources searched:** LinkedIn job-alert digest emails (`jobalerts-noreply@linkedin.com`),
+LinkedIn "New jobs similar to..." recommendation and saved-job "apply now" reminder emails
+(`jobs-noreply@linkedin.com`), and Naukri (`naukri.com`, subject "job alert" / "recommended
+jobs"). **No Naukri job-alert emails were found in this window** — consistent with every
+prior run, this inbox does not appear to receive Naukri alerts currently. All jobs below
+come from LinkedIn.
+
+Raw emails scanned: 5 LinkedIn job-alert digest threads, 1 "New jobs similar to SDE-II at
+Amazon" recommendation email, and 1 "apply now to your saved jobs" reminder email (JPMorganChase
+saved-job digest), yielding 74 job postings extracted from the plaintext job-card markup,
+reduced to 60 unique postings after deduping by Company + Role.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | Machine Learning Ops Engineer | Inovalon | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4362256862) |
+| 2 | Quantitative Data Scientist (Python), MASS, Associate | BlackRock | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4422999517) |
+| 3 | Data Scientist I | Mastercard | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4438742058) |
+| 4 | Applied AI ML Associate Senior | JPMorganChase | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440319524) |
+| 5 | Machine Learning Software Engineer | Apple | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4414161569) |
+| 6 | AI/ML Engineer - Tech Lead | State Street | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4435352155) |
+| 7 | Applied AI \| Anomaly Detection Engineer | Quantumcona | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441108269) |
+| 8 | Associate AI/ML Engineer | Optum India | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4442183263) |
+| 9 | AI/Machine Learning Engineer | Siemens Energy | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441310950) |
+| 10 | Applied Scientist, International Machine Learning | Amazon | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4433360751) |
+| 11 | Machine Learning Scientist I - Customer Technology | Wayfair | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441607608) |
+| 12 | Data Scientist | Societe Generale Global Solution Centre | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4422994015) |
+| 13 | AI / ML Engineer | GoodScore | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441481293) |
+| 14 | AI Engineer | CME Group | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441461282) |
+| 15 | AI / LLM Engineer | Kaleidofin Private Limited | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441468902) |
+| 16 | Data Scientist | Metropolis Technologies | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441473061) |
+| 17 | Data Scientist 1 | FedEx | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4421621787) |
+| 18 | AI/ML Engineer ⚠️ | CG-VAK Software & Exports Ltd. | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441719207) |
+| 19 | Sr Associate — ML Ops/Data Ops, Emerging Tech, Advisory ⚠️ | PwC India | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4292873133) |
+| 20 | Software Engineer (AI-native development) | Microsoft | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441989128) |
+
+**⚠️ Consulting/body-shop flags — 2 landed inside today's top 20** (both scored high on
+role fit + Gurugram location but took the company-type penalty): CG-VAK Software & Exports
+Ltd. (#18, IT staffing/services vendor) and PwC India (#19, Big-4 advisory). Skip these fast
+unless the role itself is compelling. Additional consulting/staffing/outsourcing companies
+present in the wider 60-job pool but ranked outside the top 20 (skip these too): UST (ML
+Engineer I), ToggleNow (Software Developer – AI/ML Engineer), Trinity Life Sciences
+(Associate Data Scientist ×2 — life-sciences consulting, not product), True Tech
+Professionals (Generative AI Engineer), CG-VAK (2nd posting — AI Engineer-Agentic
+AI/Voice Bot/LLM), Bain & Company (Associate - ENR AI Engineer CoE), PwC India (2nd
+posting — GenAI/Python Specialist), Accenture in India (S&C Global Network AI Analyst),
+Crescendo Global (Manager-Fraud Analytics — recruiting firm), Innova ESI (AI Engineer-
+Bangalore), McKinsey & Company (Knowledge Analyst - Risk Dynamics), Metyis (Data
+Engineering Associate — analytics consulting), Tredence Inc. (GCP Cloud-Data Engineer).
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score are Inovalon (#1), BlackRock (#2), Mastercard (#3), JPMorganChase (#4), and
+Apple (#5) — but checking existing Gmail drafts first found Inovalon, BlackRock, Mastercard,
+and JPMorganChase already have prior outreach drafts (going back to late May/June, several
+JPMorganChase). State Street (#6), Quantumcona (#7), Optum India (#8), Amazon (#10),
+Societe Generale (#12), GoodScore (#13), CME Group (#14), and Kaleidofin (#15) are also
+already drafted from prior runs. To keep the daily slate at 5 distinct, not-yet-contacted
+companies, outreach was drafted for the highest-ranked companies with no existing draft:
+**Apple (#5), Siemens Energy (#9), Wayfair (#11), Metropolis Technologies (#16), and
+Microsoft (#20)**.
+
+**Correction made mid-run:** two drafts were initially created for DP World and Nielsen
+before a closer check of Gmail drafts surfaced that Nielsen already had two prior outreach
+drafts (2026-06-11 and 2026-06-21) that an earlier keyword search missed. Since DP World and
+Nielsen both scored lower (11) than Metropolis Technologies (13) and Microsoft (12), those
+two were swapped in as the correct 4th and 5th picks. The stray DP World and Nielsen drafts
+from this run could **not** be deleted/trashed — the same Gmail re-authorization error
+described below also blocks `apply_sensitive_thread_label` (trash). **Action needed from
+user:** please manually delete the duplicate "ML Engineer - Suryatej Lalam - DP World" and
+"ML Engineer - Suryatej Lalam - Nielsen" drafts created today (2026-07-20) from Gmail Drafts.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| Apple | Machine Learning Software Engineer | ML Engineer - Suryatej Lalam - Apple | `careers@apple.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Siemens Energy | AI/Machine Learning Engineer | ML Engineer - Suryatej Lalam - Siemens Energy | `careers@siemens-energy.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Wayfair | Machine Learning Scientist I - Customer Technology | ML Engineer - Suryatej Lalam - Wayfair | `careers@wayfair.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Metropolis Technologies | Data Scientist | ML Engineer - Suryatej Lalam - Metropolis Technologies | `careers@metropolis.io` (placeholder — domain unverified, replace before sending) | new draft created this run |
+| Microsoft | Software Engineer (AI-native development) | ML Engineer - Suryatej Lalam - Microsoft | `careers@microsoft.com` (placeholder — unverified, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` Gmail label still could not be created this run —
+`create_label` failed with "MCP server Gmail requires re-authorization (token expired)",
+the same unresolved issue flagged in every prior run. All 5 (plus the 2 stray duplicate)
+drafts above were created successfully before that error surfaced; only the labeling
+(and thread-trash cleanup) step is blocked. Find today's outreach drafts by subject prefix
+`ML Engineer - Suryatej Lalam -` in Gmail Drafts until the Gmail connector is
+re-authorized, then label them manually or re-run. **Action needed from user:** please
+re-authorize the Gmail connector via claude.ai connector settings — this has now blocked
+label creation for 6+ consecutive daily runs.
