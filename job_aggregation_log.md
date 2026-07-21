@@ -1015,3 +1015,86 @@ drafts above were created successfully before that error surfaced; only the labe
 re-authorized, then label them manually or re-run. **Action needed from user:** please
 re-authorize the Gmail connector via claude.ai connector settings — this has now blocked
 label creation for 6+ consecutive daily runs.
+
+## 2026-07-21
+
+**Search window:** last 48 hours (2026-07-19 → 2026-07-21)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`,
+`jobs-noreply@linkedin.com`) and Naukri (`naukri.com`, subject "job alert" /
+"recommended jobs"). **No Naukri job-alert emails were found in this window** — the
+inbox has no Naukri messages at all in the last 48 hours, only LinkedIn.
+
+Raw emails scanned: 9 distinct LinkedIn job-alert digest threads (several overlapping
+across multiple saved alerts — "machine learning engineer", "applied scientist",
+"mlops engineer" in Gurugram/Hyderabad/Bengaluru), yielding 48 unique job postings
+(deduped by Company + Role) after filtering out non-job-alert LinkedIn emails
+(application-sent confirmations, invitation notifications, "X recently posted"
+engagement emails).
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | Associate AI/ML Engineer | Optum India | Gurgaon | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4442183263) |
+| 2 | AI/Machine Learning Engineer | Siemens Energy | Gurgaon | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441310950) |
+| 3 | ML Engineer - Vision | RocketFrog.ai | Noida | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441195759) |
+| 4 | ML Engineer Associate | HexaKnox Innovation Labs | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439676398) |
+| 5 | Junior AI Engineer | HexaKnox Innovation Labs | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439678182) |
+| 6 | Specialist, AI Engineer | MSD | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441609013) |
+| 7 | Associate Data Scientist | Optum India | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4442485487) |
+| 8 | Machine Learning Software Engineer | Apple | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4414161569) |
+| 9 | Data Scientist | Societe Generale Global Solution Centre | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4422994015) |
+| 10 | Applied Research Scientist - AI Models & Agents | AMD | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4347336078) |
+| 11 | Data Scientist | News Corp | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4433883939) |
+| 12 | Machine Learning Scientist | DP World | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4383739897) |
+| 13 | Gen AI Data Engineer | Mobility Global | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439208879) |
+| 14 | Applied Scientist, Alexa Connections | Amazon | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4405894737) |
+| 15 | Applied Scientist II, Alexa AI | Amazon | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4384500650) |
+| 16 | Applied Scientist, International Machine Learning | Amazon | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4433360751) |
+| 17 | Data Scientist | Ecolab | Bengaluru East | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4424171731) |
+| 18 | AI Associate | NewCold | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439244478) |
+| 19 | AI Associate-ML | NewCold | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439247455) |
+| 20 | Software Engineer (AI-native development) | Microsoft | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441989128) |
+
+**No consulting/body-shop roles landed in today's top 20** — unusual compared to recent
+days. Consulting/staffing/outsourcing companies present in the wider 48-job pool but
+ranked outside the top 20 (skip these, flagged by company-type penalty): Accenture in
+India (AI/ML Engineer, and S&C Global Network - AI - Auto & Industrial Analyst), PwC
+India (GenAI/Python Specialist, and Senior Associate - ML Ops/Data Ops Advisory),
+GlobalLogic (Generative AI Engineer, IRC279043), CG-VAK Software & Exports Ltd. (Al/ML
+Engineer), Bain & Company (Associate - ENR AI Engineer CoE), McKinsey & Company
+(Knowledge Analyst - Risk Dynamics), Metyis (Data Engineering Associate — analytics
+consulting), ToggleNow (Software Developer – AI/ML Engineer), Trinity Life Sciences
+(Associate Data Scientist, AI Engineering — life-sciences consulting, not product, per
+the same classification used in the 2026-07-20 entry), and Ensemble Global (Engineer II,
+AI — name pattern suggests an IT staffing vendor, unconfirmed). Also worth a skip:
+Jobgenix (Associate Engineer) looks like a recruiting/job-board platform rather than a
+direct employer.
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score are Optum India (#1), Siemens Energy (#2), RocketFrog.ai (#3), HexaKnox
+Innovation Labs (#4/#5), and MSD (#6) — but checking existing Gmail drafts first found
+Optum India (drafted 2026-07-08 and 2026-06-13) and Siemens Energy (drafted yesterday,
+2026-07-20) already have prior outreach. Apple (#8) and Societe Generale (#9) also
+already have prior drafts (2026-07-20 and 2026-06-02 respectively). To keep the daily
+slate at 5 distinct, not-yet-contacted companies, outreach was drafted for the
+highest-ranked companies with no existing draft: **RocketFrog.ai (#3), HexaKnox
+Innovation Labs (#4), MSD (#6), AMD (#10), and News Corp (#11)**.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| RocketFrog.ai | ML Engineer - Vision | ML Engineer - Suryatej Lalam - RocketFrog.ai | `careers@rocketfrog.ai` (placeholder — unverified, replace before sending) | new draft created this run |
+| HexaKnox Innovation Labs | ML Engineer Associate | ML Engineer - Suryatej Lalam - HexaKnox Innovation Labs | `careers@hexaknox.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| MSD | Specialist, AI Engineer | ML Engineer - Suryatej Lalam - MSD | `careers@msd.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| AMD | Applied Research Scientist - AI Models & Agents | ML Engineer - Suryatej Lalam - AMD | `careers@amd.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| News Corp | Data Scientist | ML Engineer - Suryatej Lalam - News Corp | `careers@newscorp.com` (placeholder — unverified, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` Gmail label still could not be created this
+run — `create_label` failed with "MCP server Gmail requires re-authorization (token
+expired)", the same unresolved issue flagged in every prior run. All 5 drafts above were
+created successfully before that error surfaced; only the labeling step is blocked.
+Find today's outreach drafts by subject prefix `ML Engineer - Suryatej Lalam -` in Gmail
+Drafts until the Gmail connector is re-authorized, then label them manually or re-run.
+**Action needed from user:** please re-authorize the Gmail connector via claude.ai
+connector settings — this has now blocked label creation for 7+ consecutive daily runs.
