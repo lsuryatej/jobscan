@@ -1184,3 +1184,91 @@ Suryatej Lalam -` in Gmail Drafts until the Gmail connector is re-authorized, th
 them manually or re-run.
 **Action needed from user:** please re-authorize the Gmail connector via claude.ai
 connector settings — this has now blocked label creation for 8+ consecutive daily runs.
+
+## 2026-07-23
+
+**Search window:** last 48 hours (2026-07-21 → 2026-07-23)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`,
+`jobs-noreply@linkedin.com`) and Naukri (`naukri.com`, subject "job alert" /
+"recommended jobs"). **No Naukri job-alert emails were found in this window** — the
+inbox still has no Naukri messages in the last 48 hours, only LinkedIn.
+
+Raw emails scanned: 11 distinct LinkedIn job-alert/recommendation digest threads
+(alerts for "machine learning engineer" in Hyderabad, "mlops engineer" in Bengaluru, plus
+several "jobs picked/similar to your profile" digests covering Gurugram/Hyderabad/
+Bengaluru/Delhi), yielding 69 unique job postings (deduped by Company + Role) after
+filtering out non-job-alert LinkedIn emails (reaction/invitation notifications and a
+career-workshop promo). One listing ("AI Engineer" at "TestCompany123Blr2023") was
+excluded again as an obvious test/spam posting, not a real job.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | Data Scientist II | Mastercard | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4432371016) |
+| 2 | Jr ML Engineer | Baseforge Technologies | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439144232) |
+| 3 | AI ML Engineer | Deservely Technologies | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4436075557) |
+| 4 | Associate AI or ML Engineer | Optum India | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443010380) |
+| 5 | Senior AI/ML Engineer (Automation) - Senior Associate | State Street | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443099713) |
+| 6 | Machine Learning Engineer | Fast Code AI | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4442299303) |
+| 7 | AI/ML Engineer | Trufe | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440964174) |
+| 8 | Associate AI/ML Engineer | Optum India | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439044122) |
+| 9 | Data Scientist | LSEG | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4324640971) |
+| 10 | Data Scientist - AI & Automation | eBay | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440166150) |
+| 11 | Applied Scientist I | Amazon | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443044320) |
+| 12 | Junior Algorithm Engineer | DUSQ | Dwarka | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4442056703) |
+| 13 | Analyst-Data Science | American Express | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439988079) |
+| 14 | Senior Analyst - Data Science (SQL, Python, GenAI) | American Express | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439196703) |
+| 15 | AI Engineer | dunnhumby | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4442585721) |
+| 16 | Sr Machine Learning Engineer | Amgen | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4433330362) |
+| 17 | Data Scientist I | Alegeus | Bengaluru East | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4414657280) |
+| 18 | AI Automation Engineer | BillCut | New Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440108651) |
+| 19 | Senior Software Engineer/Applied AI Scientist | The Hartford India | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4421173248) |
+| 20 | AI Engineer | Honasa Consumer Ltd. | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440146213) |
+
+**Consulting/staffing/body-shop roles to skip** — present in the wider 69-job pool but
+kept out of the top 20 by the company-type penalty: McKinsey & Company (Data Scientist -
+Marketing & Sales), EXL (Data Science — BPO), Capgemini (Data Science), EY (three
+listings: Consultant - Tech Consulting AI and Data, RC FS-MS EY COMPLY AI Engineers-Senior,
+and Oracle AI Developer - Staff), Infosys (four listings: AI Engineers, Generative AI,
+GenAI/Agentic AI Engineer, and AWS Bedrock Developer), Deloitte (Gen AI-AI and Data
+Science Engineer III), Birlasoft (GEN AI Developer), IQ-EQ (Engineer - Digital & AI
+Solutions — fund administration/professional services), Hitachi Digital Services (AI
+Engineer GDC — outsourcing/GDC), CodeVyasa (Artificial Intelligence Specialist — dev
+shop), Nomiso (Senior AI/ML Engineer — IT services), Asian Hires (AI Consultant —
+staffing agency), NxtWave ("Hiring for a Client" — staffing, not a direct employer),
+Drenova Hiring Solutions (Casual AI Engineer — staffing), PwC Acceleration Center India
+and PwC India (Data Engineer / GCP Data Engineer — Advisory), YMinds.AI (Data Engineer —
+staffing-style listing), ThinkWise Consulting LLP (ML Engineer AI COE), Enterprise Minds
+(AIML Engineer — IT services), Talentgigs (Agentic AI Engineer — staffing platform), AAA
+Global (Quantitative Researcher — recruiting agency), and IQVIA (AIML Engineer — CRO/
+professional services). Also worth a skip: Ensemble Global (Engineer II, AI — name
+pattern suggests IT staffing, unconfirmed).
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score are Mastercard (#1), Baseforge Technologies (#2), Deservely Technologies
+(#3), Optum India (#4), and State Street (#5) — but checking existing Gmail drafts first
+found Mastercard (drafted 2026-07-19), Baseforge Technologies (drafted 2026-07-15), Optum
+India (drafted 2026-07-08 and 2026-06-13), State Street (drafted 2026-07-13 and
+2026-07-14), Trufe (#7, drafted 2026-07-18), eBay (#10, drafted 2026-05-31), Amazon (#11,
+drafted multiple times), American Express (#13/#14, drafted multiple times), dunnhumby
+(#15, drafted multiple times), Amgen (#16, drafted multiple times), BillCut (#18, drafted
+2026-06-28, 2026-06-29, 2026-07-22), and Honasa Consumer Ltd. (#20, drafted 2026-07-17)
+already have prior outreach. To keep the daily slate at 5 distinct, not-yet-contacted
+companies, outreach was drafted for the highest-ranked companies with no existing draft:
+**Deservely Technologies (#3), Fast Code AI (#6), LSEG (#9), DUSQ (#12), and Alegeus
+(#17)**.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| Deservely Technologies | AI ML Engineer | ML Engineer - Suryatej Lalam - Deservely Technologies | `careers@deservely.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| Fast Code AI | Machine Learning Engineer | ML Engineer - Suryatej Lalam - Fast Code AI | `careers@fastcode.ai` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| LSEG | Data Scientist | ML Engineer - Suryatej Lalam - LSEG | `careers@lseg.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| DUSQ | Junior Algorithm Engineer | ML Engineer - Suryatej Lalam - DUSQ | `careers@dusq.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| Alegeus | Data Scientist I | ML Engineer - Suryatej Lalam - Alegeus | `careers@alegeus.com` (placeholder — unverified, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` Gmail label was successfully created this run
+(the "MCP server Gmail requires re-authorization" error flagged in every prior run since
+2026-07-15 did not recur — the connector appears to be re-authorized now). All 5 drafts
+above were created and labeled `job-outreach` successfully.
