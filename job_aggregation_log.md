@@ -1272,3 +1272,88 @@ companies, outreach was drafted for the highest-ranked companies with no existin
 (the "MCP server Gmail requires re-authorization" error flagged in every prior run since
 2026-07-15 did not recur — the connector appears to be re-authorized now). All 5 drafts
 above were created and labeled `job-outreach` successfully.
+
+## 2026-07-24
+
+**Search window:** last 48 hours (2026-07-22 → 2026-07-24)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`,
+`jobs-noreply@linkedin.com`) and Naukri (`naukri.com`, subject "job alert" /
+"recommended jobs"). **No Naukri job-alert emails were found in this window** — the
+inbox still has no Naukri messages in the last 48 hours, only LinkedIn.
+
+Raw emails scanned: 23 matching threads in the search window, of which 10 were genuine
+job-listing digests (single-job alerts for "Software Engineer at Microsoft", "Associate
+AI/ML Engineer at Optum India" ×2, "AI Engineer at Beckman Coulter Diagnostics", "Casual
+AI Engineer at Drenova Hiring Solutions", "Data Engineer at PwC Acceleration Center
+India", plus "jobs picked/similar to your profile" digests covering Hyderabad/
+Bengaluru/Gurugram/Delhi/Mumbai). The other 13 threads were excluded as non-job-alert
+noise: "your application was sent to X" confirmations, post-reaction notifications,
+connection-invitation alerts, and a "see who reached out" prompt. Parsing the 10 digests
+yielded 68 unique job postings after deduping by Company + Role.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | Machine Learning Engineer | Gabeo.ai | Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4391708150) |
+| 2 | Associate AI/ML Engineer | Optum India | Noida | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443117568) |
+| 3 | Analyst-Data Science | American Express | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4442673221) |
+| 4 | Applied Scientist I, Amazon Shipping | Amazon Science | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441017436) |
+| 5 | Machine Learning Engineer II (Data & Audience Platform Team), Hyderabad | Warner Bros. Discovery | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4429039909) |
+| 6 | Sr Machine Learning Engineer | Amgen | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4433330362) |
+| 7 | AI/ML Engineer | Trufe | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440964174) |
+| 8 | Jr ML Engineer | Baseforge Technologies | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439144232) |
+| 9 | Associate Machine Learning Engineer-1 | The Goodyear Tire & Rubber Company | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4414701842) |
+| 10 | Associate AI or ML Engineer | Optum India | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443010380) |
+| 11 | Senior AI/ML Engineer (Automation) - Senior Associate | State Street | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443099713) |
+| 12 | Machine Learning Engineer | Incept Labs | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4393558080) |
+| 13 | Machine Learning Engineer | MantriAI | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4442630092) |
+| 14 | Associate - Data Science / Applied AI ML | JPMorganChase | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443770736) |
+| 15 | Associate AI-ML Engineer | Fortive | Bengaluru South | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443366363) |
+| 16 | AI/ML Engineer | Hewlett Packard Enterprise | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443358220) |
+| 17 | Data Scientist | Anko GCC | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443105307) |
+| 18 | Senior Associate -Applied AI ML -Digital | JPMorganChase | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4394949495) |
+| 19 | Machine Learning Engineer | Fast Code AI | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4442299303) |
+| 20 | AI Engineer | Honasa Consumer Ltd. | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440146213) |
+
+**Consulting/staffing/body-shop roles to skip** — present in the wider 68-job pool but
+kept out of the top 20 by the company-type penalty: Viraaj HR Solutions Private Limited
+(AI ML Engineer, posted under three different locations — an HR/staffing agency posting
+on a client's behalf, not a direct employer), Deloitte (two listings: Gen AI-AI and Data
+Science Engineer III, Machine Learning-Lead AI and Data Science Engineer II), Nomiso
+(Senior AI/ML Engineer — IT services), ThinkWise Consulting LLP (ML Engineer AI COE), EY
+(Oracle AI - Oracle AI Developer - Staff), Enterprise Minds, Inc (AIML Engineer — IT
+services), AAA Global (Quantitative Researcher — recruiting agency), Growify Digital (AI
+Application Developer in Delhi — small digital marketing agency), Ensemble Global
+(Engineer II, AI — staffing-agency name pattern), Talentgigs (Agentic AI Engineer —
+staffing platform), Drenova Hiring Solutions (Casual AI Engineer — staffing), BIG
+Language Solutions (Machine Learning Engineer — localization/outsourcing services),
+Collabera (AI Engineer — IT staffing firm), KloudStax (Google AI/ML Engineering
+(Delivery) — small IT/cloud consulting shop), Tech Economy (Specialist, Corporate
+Relations – Data Insights — agency-style listing, also off-target role), Kaufman Rossin
+(Ai Solutions Engineer — accounting/advisory firm), IBM (Data Engineer — enterprise
+services & consulting), Capgemini (Data Engineer — IT consulting), PwC Acceleration
+Center India (Data Engineer — Big-4 advisory center), YMinds.AI (keyword-stuffed Data
+Engineer listing — staffing-style), and Torinit (Artificial Intelligence Engineer — small
+IT services/dev shop).
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score are Gabeo.ai (#1), Optum India (#2), American Express (#3), Amazon
+Science (#4), and Warner Bros. Discovery (#5). Checked existing `job-outreach` Gmail
+drafts first (5 on file, all created 2026-07-23 for Alegeus, DUSQ, LSEG, Fast Code AI,
+and Deservely Technologies) — none of the current top 5 overlap, so all five were
+drafted fresh this run. Fast Code AI re-appears at #19 in today's list but already has a
+2026-07-23 draft, so it was left alone.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| Gabeo.ai | Machine Learning Engineer | ML Engineer - Suryatej Lalam - Gabeo.ai | `careers@gabeo.ai` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| Optum India | Associate AI/ML Engineer | ML Engineer - Suryatej Lalam - Optum India | `careers@optum.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| American Express | Analyst-Data Science | ML Engineer - Suryatej Lalam - American Express | `careers@americanexpress.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Amazon Science | Applied Scientist I, Amazon Shipping | ML Engineer - Suryatej Lalam - Amazon Science | `careers@amazon.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Warner Bros. Discovery | Machine Learning Engineer II | ML Engineer - Suryatej Lalam - Warner Bros. Discovery | `careers@wbd.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` label already existed from the 2026-07-23 run.
+All 5 new drafts above were created and labeled `job-outreach` successfully (confirmed via
+`list_drafts` — 10 drafts now carry the label: 5 from today, 5 from 2026-07-23).
