@@ -1357,3 +1357,91 @@ drafted fresh this run. Fast Code AI re-appears at #19 in today's list but alrea
 **Note on labeling:** the `job-outreach` label already existed from the 2026-07-23 run.
 All 5 new drafts above were created and labeled `job-outreach` successfully (confirmed via
 `list_drafts` — 10 drafts now carry the label: 5 from today, 5 from 2026-07-23).
+
+## 2026-07-25
+
+**Search window:** last 48 hours (2026-07-23 → 2026-07-25)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`,
+`jobs-noreply@linkedin.com`) and Naukri (`naukri.com`, subject "job alert" /
+"recommended jobs"). **No Naukri job-alert emails were found in this window** — the
+inbox still has no Naukri messages in the last 48 hours, only LinkedIn.
+
+Raw emails scanned: 12 distinct LinkedIn job-alert/recommendation digest threads
+("apply now to your saved jobs", job alerts for "applied scientist" / "machine learning
+engineer" in Bengaluru, "jobs picked/similar to your profile" digests covering Gurugram/
+Hyderabad/Bengaluru/Delhi), yielding 62 raw job postings. After deduping exact repeats
+(same company + role posted more than once, e.g. Hewlett Packard Enterprise's "AI/ML
+Engineer" and Fortive's "Associate AI-ML Engineer" each appearing twice across locations,
+and Viraaj HR Solutions Private Limited's "AI ML Engineer" posted 3x across Gurugram/
+Delhi/New Delhi), 59 unique jobs (deduped by Company + Role) went into ranking.
+"Application confirmation" emails ("Your application was sent to X") were excluded as
+noise, not job listings.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | Machine Learning Scientist III- India | DISCO | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4425895357) |
+| 2 | Data Scientist | Citi | Haryana, India | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443171368) |
+| 3 | Applied Scientist I, Amazon Shipping | Amazon Science | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441017436) |
+| 4 | Analyst-Data Science | American Express | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4442673221) |
+| 5 | Machine Learning Engineer | Gabeo.ai | Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4391708150) |
+| 6 | Machine Learning Engineer | S&P Global | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4434607893) |
+| 7 | Sr Machine Learning Engineer | Amgen | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4433330362) |
+| 8 | Applied Scientist I | Amazon Science | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4412834723) |
+| 9 | Data Scientist | Kotak Mahindra Bank | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444292766) |
+| 10 | Applied scientist 2 - Fine tuning | Microsoft | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443916118) |
+| 11 | ML Engineer (Forward Deployed) | Applied Computing | Greater Bengaluru Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4432326059) |
+| 12 | AI/Machine Learning Engineer | Siemens Energy | Gurgaon | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443163988) |
+| 13 | Senior Associate -Applied AI ML -Digital | JPMorganChase | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4394949495) |
+| 14 | Senior AI Engineer – EEG Cognitive Scoring Systems | Brainwave Science | Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441037210) |
+| 15 | Associate - Data Science / Applied AI ML | JPMorganChase | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443770736) |
+| 16 | Associate AI/ML Engineer | Optum India | Noida | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443117568) |
+| 17 | Machine Learning Engineer | Incept Labs | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4393558080) |
+| 18 | Machine Learning Engineer | MantriAI | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4442630092) |
+| 19 | AI Engineer | OATI | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443928089) |
+| 20 | Machine Learning Engineer II (Data & Audience Platform Team), Hyderabad | Warner Bros. Discovery | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4429039909) |
+
+**Consulting/staffing/body-shop roles to skip** — present in the wider 59-job pool but
+kept out of the top 20 by the company-type penalty: Viraaj HR Solutions Private Limited
+(AI ML Engineer, posted 3x across Gurugram/Delhi/New Delhi — an HR/staffing agency
+posting on a client's behalf, not a direct employer), Deloitte (three listings: Gen AI-AI
+and Data Science Engineer III, Machine Learning-Lead AI and Data Science Engineer II, and
+Data Lake - Consultant), Nomiso (Senior AI/ML Engineer — IT services), Anko GCC (Data
+Scientist — Target's captive global capability center, a service-center setup rather than
+a direct product org), Talentgigs (Agentic AI Engineer — staffing platform), Growify
+Digital (AI Application Developer in Delhi — small digital marketing agency), PwC India
+(IN_ Associate_ Data Science_ Advisory — Big-4 advisory), Capgemini (Data Engineer — IT
+consulting), Promaynov Advisory Services Pvt. Ltd (Business Analyst — advisory/staffing
+name pattern, also off-target role), Tech Economy (Specialist, Corporate Relations – Data
+Insights — agency-style listing, also off-target role), Kaufman Rossin (Ai Solutions
+Engineer — accounting/advisory firm), IBM (Data Engineer — enterprise services &
+consulting), BIG Language Solutions (Machine Learning Engineer — localization/outsourcing
+services), Collabera (AI Engineer — IT staffing firm), PwC Acceleration Center India
+(Data Engineer- Associate- Analytics as Service - Operate — Big-4 advisory center),
+KloudStax (Google AI/ML Engineering (Delivery) — small IT/cloud consulting shop), and
+Torinit (Artificial Intelligence Engineer — small IT services/dev shop).
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score are DISCO (#1), Citi (#2), Amazon Science (#3), American Express (#4), and
+Gabeo.ai (#5). Checked existing `job-outreach` Gmail drafts first (10 on file: Warner
+Bros. Discovery, Amazon Science, American Express, Optum India, and Gabeo.ai from
+2026-07-24, plus Alegeus, DUSQ, LSEG, Fast Code AI, and Deservely Technologies from
+2026-07-23) — Amazon Science (#3), American Express (#4), and Gabeo.ai (#5) already have
+drafts, so those three were skipped. To keep the daily slate at 5 distinct, not-yet-
+contacted companies, outreach was drafted for the highest-ranked companies with no
+existing draft: **DISCO (#1), Citi (#2), S&P Global (#6), Amgen (#7), and Kotak Mahindra
+Bank (#9)**.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| DISCO | Machine Learning Scientist III - India | ML Engineer - Suryatej Lalam - DISCO | `careers@csdisco.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| Citi | Data Scientist | ML Engineer - Suryatej Lalam - Citi | `careers@citi.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| S&P Global | Machine Learning Engineer | ML Engineer - Suryatej Lalam - S&P Global | `careers@spglobal.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Amgen | Sr Machine Learning Engineer | ML Engineer - Suryatej Lalam - Amgen | `careers@amgen.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Kotak Mahindra Bank | Data Scientist | ML Engineer - Suryatej Lalam - Kotak Mahindra Bank | `careers@kotak.com` (placeholder — unverified, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` label already existed from prior runs. All 5 new
+drafts above were created and labeled `job-outreach` successfully (confirmed via
+`list_labels` — the label's message count went from 10 to 15 after this run).
