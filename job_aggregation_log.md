@@ -1445,3 +1445,83 @@ Bank (#9)**.
 **Note on labeling:** the `job-outreach` label already existed from prior runs. All 5 new
 drafts above were created and labeled `job-outreach` successfully (confirmed via
 `list_labels` — the label's message count went from 10 to 15 after this run).
+
+## 2026-07-26
+
+**Search window:** last 48 hours (2026-07-24 → 2026-07-26)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`,
+`jobs-noreply@linkedin.com`) and Naukri (`naukri.com`, subject "job alert" /
+"recommended jobs"). **No Naukri job-alert emails were found in this window** — the
+inbox still has no Naukri messages in the last 48 hours, only LinkedIn.
+
+Raw emails scanned: 6 distinct LinkedIn threads (10 messages total — several digests were
+resent hours apart with the same subject), covering job alerts for "machine learning
+engineer" in Hyderabad/Bengaluru/Gurugram, "mlops engineer" in Bengaluru, "applied
+scientist" in India, plus a "saved jobs" apply-reminder digest, yielding 77 raw job
+cards. After deduping exact repeats (same company + role appearing across resent digests
+and cross-posted alerts, e.g. Amgen's "Associate – AI/ML Innovation Engineer" appearing
+5x, Qualcomm's "Associate Engineer" 4x, and Hewlett Packard Enterprise's "AI/ML Engineer"
+3x), 49 unique jobs (deduped by Company + Role) went into ranking. "Application
+confirmation" emails ("Your application was sent to X") were excluded as noise, not job
+listings.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | AI / ML Engineer | SecNinjaz Technologies LLP | Delhi, India | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444306851) |
+| 2 | Data Scientist | BioBrain Insights | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443863955) |
+| 3 | Data Scientist / AI Engineer / Analytics Engineer | Great Learning | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444074998) |
+| 4 | Data Scientist | Aftershoot | Delhi, India | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444928215) |
+| 5 | Data Scientist | Citi | Haryana, India | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443171368) |
+| 6 | Machine Learning Engineer | S&P Global | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4434607893) |
+| 7 | AI/Machine Learning Engineer | Siemens Energy | Gurgaon | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443163988) |
+| 8 | Machine Learning Engineer | Solventum | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4408285032) |
+| 9 | AI / ML Data Scientist (Across levels) | Nielsen | Bengaluru East | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441586395) |
+| 10 | Senior Applied Scientist | Microsoft | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444427743) |
+| 11 | Applied Scientist I | Amazon Science | Bengaluru, Karnataka, India | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4412834723) |
+| 12 | Data Scientist | Kotak Mahindra Bank | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444292766) |
+| 13 | AI/ML Engineer | Hewlett Packard Enterprise | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443354325) |
+| 14 | AI/ML Engineer | Optum India | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444401964) |
+| 15 | Applied scientist 2 - Fine tuning | Microsoft | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443916118) |
+| 16 | ML Engineer (Forward Deployed) | Applied Computing | Greater Bengaluru Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4432326059) |
+| 17 | Machine Learning Scientist III- India | DISCO | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4425895357) |
+| 18 | Senior Associate -Applied AI ML -Digital | JPMorganChase | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4394949495) |
+| 19 | Senior AI Engineer – EEG Cognitive Scoring Systems | Brainwave Science | Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441037210) |
+| 20 | Data Scientist II | FedEx | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4436131526) |
+
+**Consulting/staffing/body-shop roles to skip** — present in the wider 49-job pool but
+kept out of the top 20 by the company-type penalty: PwC India (two listings:
+IN_Associate_AI Engineer_Financial Services_Advisory in Hyderabad, and IN_ Associate_
+Data Science_ Advisory Corporate_Advisory in Bangalore — Big-4 advisory), PwC
+Acceleration Center India (Data Engineer- Associate- Analytics as Service - Operate — Big-4
+advisory center), Deloitte (Data Lake - Consultant), Capgemini (Data Engineer — IT
+consulting), Cognizant (AI Customer Engineer — IT services), HCLTech (Machine Learning
+Engineer — IT services), Dentsu Global Services (Data & AI Engineer — agency/outsourcing),
+Conduent (Data Scientist I — BPO/outsourcing), ERM (Data Automation (Python) —
+environmental/sustainability consulting), and Promaynov Advisory Services Pvt. Ltd
+(Business Analyst — advisory/staffing name pattern, also off-target role).
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score are SecNinjaz Technologies LLP (#1), BioBrain Insights (#2), Great Learning
+(#3), Aftershoot (#4), and Citi (#5). Checked existing `job-outreach` Gmail drafts first
+(15 on file, including Citi and S&P Global from 2026-07-25, plus Kotak Mahindra Bank,
+Amgen, DISCO, Warner Bros. Discovery, Amazon Science, American Express, Optum India,
+Gabeo.ai, Alegeus, DUSQ, LSEG, Fast Code AI, and Deservely Technologies from prior runs) —
+Citi (#5) and S&P Global (#6) already have drafts, so those were skipped. To keep the
+daily slate at 5 distinct, not-yet-contacted companies, outreach was drafted for the
+highest-ranked companies with no existing draft: **SecNinjaz Technologies LLP (#1),
+BioBrain Insights (#2), Great Learning (#3), Aftershoot (#4), and Siemens Energy (#7)**.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| SecNinjaz Technologies LLP | AI / ML Engineer | ML Engineer - Suryatej Lalam - SecNinjaz Technologies | `careers@secninjaz.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| BioBrain Insights | Data Scientist | ML Engineer - Suryatej Lalam - BioBrain Insights | `careers@biobraininsights.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| Great Learning | Data Scientist / AI Engineer / Analytics Engineer | ML Engineer - Suryatej Lalam - Great Learning | `careers@mygreatlearning.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Aftershoot | Data Scientist | ML Engineer - Suryatej Lalam - Aftershoot | `careers@aftershoot.co` (placeholder — unverified, replace before sending) | new draft created this run |
+| Siemens Energy | AI/Machine Learning Engineer | ML Engineer - Suryatej Lalam - Siemens Energy | `careers@siemens-energy.com` (placeholder — unverified, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` label already existed from prior runs. All 5 new
+drafts above were created and labeled `job-outreach` successfully (confirmed via
+`list_labels` — the label's message count went from 15 to 20 after this run).
