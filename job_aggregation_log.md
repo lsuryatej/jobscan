@@ -1525,3 +1525,91 @@ BioBrain Insights (#2), Great Learning (#3), Aftershoot (#4), and Siemens Energy
 **Note on labeling:** the `job-outreach` label already existed from prior runs. All 5 new
 drafts above were created and labeled `job-outreach` successfully (confirmed via
 `list_labels` — the label's message count went from 15 to 20 after this run).
+
+## 2026-07-27
+
+**Search window:** last 48 hours (2026-07-25 → 2026-07-27)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`) and
+Naukri (`naukri.com`, subject "job alert" / "recommended jobs"). **No Naukri job-alert
+emails were found in this window** — the inbox still has no Naukri messages in the last
+48 hours, only LinkedIn. LinkedIn "application confirmation" emails
+(`jobs-noreply@linkedin.com`, "Your application to X") and connection/invitation
+notifications (`notifications-noreply@linkedin.com`) were excluded as noise, not job
+alerts.
+
+Raw emails scanned: 9 LinkedIn job-alert digest messages across 6 threads (alerts for
+"applied scientist" in Bengaluru, "data engineer" in Bengaluru, "mlops engineer" in
+Bengaluru, and "machine learning engineer" in Hyderabad, some resent hours apart with
+overlapping content), yielding 74 raw job cards. One card — a Russian-language toy/doll
+listing that had clearly been spam-injected into one digest — was discarded as not a
+real job posting. After deduping exact repeats (same company + role reappearing across
+resent digests and cross-posted "other alerts" sections, e.g. Associate Engineer at
+Qualcomm and Associate Data Scientist at TriNet each appearing 3x, Associate – AI/ML
+Innovation Engineer at Amgen 2x), 49 unique jobs (deduped by Company + Role) went into
+ranking. One listing had a typo in its own title ("Machine Learing Engineer" at
+Leegality); treated as "Machine Learning Engineer" for role-fit scoring since the typo
+is clearly the source posting's, not a different role.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | AI engineer | Tuning Research (WorkableAI) | New Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4438931589) |
+| 2 | Data Scientist / AI Engineer / Analytics Engineer | Great Learning | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444074998) |
+| 3 | Data Scientist | Aftershoot | Bawana | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444928215) |
+| 4 | Machine Learning Engineer | Leegality | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444335609) |
+| 5 | Data Scientist I | MetLife | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444974240) |
+| 6 | Machine Learning Engineer | S&P Global | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4434607893) |
+| 7 | AI/ML Data Scientist - Sales Forecasting | Philips | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4435559782) |
+| 8 | Associate Data Scientist | TriNet | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444947374) |
+| 9 | MLOps Engineer | Vestas | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4427951750) |
+| 10 | AI/ML Engineer | studyix | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441826285) |
+| 11 | AI Engineer - Product and Growth | Vola Finance | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441587697) |
+| 12 | Applied AI Engineer | KTR Freight Pvt Ltd | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444315856) |
+| 13 | Data Scientist II | FedEx | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4436131526) |
+| 14 | Machine Learning Engineer | Solventum | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4408285032) |
+| 15 | AI / ML Data Scientist (Across levels) | Nielsen | Bengaluru East | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441586395) |
+| 16 | Machine Learning Scientist - II | Wayfair | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4429623173) |
+| 17 | Machine Learning Scientist II (Search) | Wayfair | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4435297949) |
+| 18 | Senior Applied Scientist | Microsoft | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444427743) |
+| 19 | Principal Applied AI Analyst - AI/ML | Data Scientist | First Citizens India | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4432821777) |
+| 20 | AI/ML Specialist - Agentic AI & Generative AI | ZF Group | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441881999) |
+
+**Consulting/staffing/body-shop roles to skip** — present in the wider 49-job pool but
+kept out of the top 20 by the company-type penalty: SecNinjaz Technologies LLP (AI / ML
+Engineer — cybersecurity consulting), BioBrain Insights (Data Scientist — boutique
+analytics consultancy), UST (ML Engineer I — IT services/outsourcing), PwC India
+(IN_Associate_AI Engineer_Financial Services_Advisory — Big-4 advisory), Talentgigs
+(Agentic AI Engineer — staffing platform), FutureLeap Search (Applied AI Scientist —
+recruiting/search firm), aikyam jobs (Associate Data Scientist posting on behalf of
+Wadhwani Foundation — staffing-agency-style listing), Conduent (Data Scientist I —
+BPO/outsourcing), Dentsu Global Services (Data & AI Engineer — agency/outsourcing),
+HCLTech (Machine Learning Engineer — IT services), CG-VAK Software & Exports Ltd. (AI/ML
+— IT services/outsourcing), Weekday (YC W21) (Graph Data Engineer — recruiting-as-a-
+service platform, not a direct employer), ERM (Data Automation (Python) —
+environmental/sustainability consulting), Cognizant (AI Customer Engineer — IT
+services), and EY (DE-Python-AI-GDS — Big-4 advisory).
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score are Tuning Research (WorkableAI) (#1), Great Learning (#2), Aftershoot
+(#3), Leegality (#4), and MetLife (#5). Checked existing `job-outreach` Gmail drafts
+first (20+ on file) — Great Learning and Aftershoot were already drafted on 2026-07-26,
+S&P Global (#6) on 2026-07-25, and TriNet (#8) and Philips (#7) had older drafts from
+2026-07-08/2026-07-14 and 2026-06-13 respectively. To keep the daily slate at 5 distinct,
+not-yet-contacted companies, outreach was drafted for the highest-ranked companies with
+no existing draft: **Tuning Research (WorkableAI) (#1), Leegality (#4), MetLife (#5),
+Vestas (#9), and studyix (#10)**.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| Tuning Research (WorkableAI) | AI engineer | ML Engineer - Suryatej Lalam - Tuning Research (WorkableAI) | `careers@workable.ai` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| Leegality | Machine Learning Engineer | ML Engineer - Suryatej Lalam - Leegality | `careers@leegality.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| MetLife | Data Scientist I | ML Engineer - Suryatej Lalam - MetLife | `careers@metlife.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Vestas | MLOps Engineer | ML Engineer - Suryatej Lalam - Vestas | `careers@vestas.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| studyix | AI/ML Engineer | ML Engineer - Suryatej Lalam - studyix | `careers@studyix.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` label already existed from prior runs.
+`label_message` failed with "Invalid id value" when called with the ID `create_draft`
+returned (that ID is not a valid message ID for labeling); switching to `label_thread`
+with each draft's `threadId` succeeded for all 5 new drafts.
