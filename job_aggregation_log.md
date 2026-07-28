@@ -1613,3 +1613,93 @@ Vestas (#9), and studyix (#10)**.
 `label_message` failed with "Invalid id value" when called with the ID `create_draft`
 returned (that ID is not a valid message ID for labeling); switching to `label_thread`
 with each draft's `threadId` succeeded for all 5 new drafts.
+
+## 2026-07-28
+
+**Search window:** last 48 hours (2026-07-26 → 2026-07-28)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`) and
+Naukri (`naukri.com`, subject "job alert" / "recommended jobs"). **No Naukri job-alert
+emails were found in this window** — a direct `from:naukri.com newer_than:2d` search
+returned zero results, confirming the inbox has no Naukri alerts in the last 48 hours,
+only LinkedIn. LinkedIn "application confirmation" emails (`jobs-noreply@linkedin.com`,
+"Your application to X"), connection/invitation notifications
+(`notifications-noreply@linkedin.com`), and editorial newsletter emails
+(`editors-noreply@linkedin.com`) were excluded as noise, not job alerts.
+
+Raw emails scanned: 14 LinkedIn job-alert digest/reminder messages across 13 threads
+(alerts for "ml platform engineer" in India, "ai engineer" in Hyderabad/Delhi, "machine
+learning engineer" in Hyderabad/Bengaluru/Gurugram/Delhi, "applied scientist" in
+Bengaluru/India, "data engineer" in Bengaluru, "mlops engineer" in Bengaluru, plus a
+"jobs similar to" reminder and "New jobs from your other alerts" cross-posted sections),
+yielding 79 raw job cards. One card — the same Russian-language toy/doll spam injected
+into a "jobs in Disney" cross-post section as in prior runs — was discarded as not a real
+job posting. After deduping exact repeats (same company + role reappearing across resent
+digests and cross-posted "other alerts" sections, e.g. MLOps Engineer at Vestas and AI
+Engineer - Agentic AI & Automation at LUXASIA each appearing twice, and the LPAI ML SW
+Senior Engineer at Qualcomm digest resending within the same thread), 60 unique jobs
+(deduped by Company + Role) went into ranking. One listing had a typo in its own title
+("Machine Learing Engineer" at Leegality); treated as "Machine Learning Engineer" for
+role-fit scoring since the typo is clearly the source posting's, not a different role.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | AI engineer | Tuning Research (WorkableAI) | New Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4438931589) |
+| 2 | Machine Learing Engineer | Leegality | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444335609) |
+| 3 | AI/ML Engineer | Trufe | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440964174) |
+| 4 | AI/ML Engineer | studyix | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441826285) |
+| 5 | AI Engineer - Agentic AI & Automation | LUXASIA | Delhi, India | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445343204) |
+| 6 | Machine Learning Engineer | Solventum | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445360131) |
+| 7 | Associate Data Scientist - Enterprise & Reporting | Circle K | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4395998184) |
+| 8 | Artificial Intelligence Researcher | HBSS India | Delhi, India | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444370587) |
+| 9 | AI Engineer - Product and Growth | Vola Finance | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4441587697) |
+| 10 | Applied AI Engineer | KTR FREIGHT PVT LTD | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444315856) |
+| 11 | Machine Learning Engineer, Apple Intelligence | Apple | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4414158695) |
+| 12 | Agentic AI Engineer | HP | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4440005713) |
+| 13 | Applied AI/ML Engineer | Google | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439890102) |
+| 14 | Generative AI Engineer | Hewlett Packard Enterprise | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4433097235) |
+| 15 | Applied Researcher | eBay | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4427826975) |
+| 16 | Senior Applied Scientist | Microsoft | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444427743) |
+| 17 | AI/ML Engineer | FICO | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4442014391) |
+| 18 | LPAI ML SW Senior Engineer | Qualcomm | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4397274735) |
+| 19 | Data Scientist- Semantic Search-Hyd/Noida (2026) | Arrise Solutions (India) Pvt. Ltd. | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4399800152) |
+| 20 | Associate – AI/ML Innovation Engineer | Amgen | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4436740658) |
+
+**Consulting/staffing/body-shop roles to skip** — present in the wider 60-job pool but
+kept out of the top 20 by the company-type penalty: Deloitte (Machine Learning-AI and
+Data Science Engineer III — Big-4 advisory), UST (ML Engineer I, and separately Lead I -
+Software Engineering-Agentic AI, GCP — IT services/outsourcing), PwC Acceleration Center
+India (Palantir AI Engineer- Senior Associate, Data Engineer-Palantir Foundry-Senior
+Associate, and Operations Engineer - Palantir Foundry-Senior Associate — Big-4 advisory
+delivery center), Trinity Life Sciences (Associate Data Scientist, AI Engineering — life
+sciences consulting), Infosys (GEN AI Engineer, and separately Microsoft Fabric (Azure
+Subscription) — IT services), aikyam jobs (Associate Data Scientist posting on behalf of
+Wadhwani Foundation — staffing-agency-style listing), FutureLeap Search (Applied AI
+Scientist - TTS — recruiting/search firm), EY (DE-Python-AI-GDS — Big-4 advisory),
+hackajob (Quant Analytics Associate - Cards — recruiting platform, not a direct
+employer), Weekday (YC W21) (Graph Data Engineer — recruiting-as-a-service platform, not
+a direct employer), and CG-VAK Software & Exports Ltd. (AI/ML — IT services/outsourcing).
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score are Tuning Research (WorkableAI) (#1), Leegality (#2), Trufe (#3), studyix
+(#4), and LUXASIA (#5). Checked existing `job-outreach` Gmail drafts first (25+ on file)
+— Tuning Research (WorkableAI), Leegality, and studyix were already drafted on
+2026-07-27. To keep the daily slate at 5 distinct, not-yet-contacted companies, outreach
+was drafted for the highest-ranked companies with no existing draft, walking down the
+full ranked list: **Trufe (#3), LUXASIA (#5), Solventum (#6), Circle K (#7), and HBSS
+India (#8)**. Confirmed via a targeted draft search (`label:job-outreach` + company name)
+that none of these 5 had a prior draft before creating new ones.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| Trufe | AI/ML Engineer | ML Engineer - Suryatej Lalam - Trufe | `careers@trufe.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| LUXASIA | AI Engineer - Agentic AI & Automation | ML Engineer - Suryatej Lalam - LUXASIA | `careers@luxasia.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Solventum | Machine Learning Engineer | ML Engineer - Suryatej Lalam - Solventum | `careers@solventum.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Circle K | Associate Data Scientist - Enterprise & Reporting | ML Engineer - Suryatej Lalam - Circle K | `careers@circlek.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| HBSS India | Artificial Intelligence Researcher | ML Engineer - Suryatej Lalam - HBSS India | `careers@hbssindia.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` label already existed from prior runs and its ID
+(`Label_3`) was confirmed via `list_labels`. `label_thread` with each new draft's
+`threadId` (looked up via `list_drafts`) succeeded for all 5 new drafts.
