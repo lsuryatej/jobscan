@@ -1703,3 +1703,77 @@ that none of these 5 had a prior draft before creating new ones.
 **Note on labeling:** the `job-outreach` label already existed from prior runs and its ID
 (`Label_3`) was confirmed via `list_labels`. `label_thread` with each new draft's
 `threadId` (looked up via `list_drafts`) succeeded for all 5 new drafts.
+
+## 2026-07-29
+
+**Search window:** last 48 hours (2026-07-27 → 2026-07-29)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`) and
+Naukri (`naukri.com`, subject "job alert" / "recommended jobs"). **No Naukri job-alert
+emails were found in this window** — a direct `from:naukri.com newer_than:2d` search
+returned zero results, confirming only LinkedIn alerts are present.
+
+Raw emails scanned: 18 threads / 24 messages matched the search. Unlike the multi-job
+digest format seen in some prior runs, every LinkedIn alert in this window was a
+single-job email (subject = "Job Title at Company"). Two messages were excluded as
+noise: an "editors-noreply@linkedin.com" newsletter ("network like a pro") and a
+"jobs-noreply@linkedin.com" application-confirmation email ("Your application to AI/ML
+Engineer at Chubb"), neither of which is a job alert. The remaining 22 job-alert emails
+were resends of the same postings across separate threads/messages (PwC India ×3, Lyric
+×3, Qualcomm ×2, Circle K ×2, Scoutit ×2, LUXASIA ×2). After deduping by Company + Role,
+**14 unique jobs** went into ranking.
+
+### Ranked jobs (all 14 — fewer than 20 unique postings arrived in this window)
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | Associate AI/ML Engineer: Generative AI Specialist | NARBA | Noida | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4444822533/) |
+| 2 | AI/ML Engineer | Scoutit | Delhi, India | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4444838361/) |
+| 3 | AI Engineer - Agentic AI & Automation | LUXASIA | Delhi, India | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4445343204/) |
+| 4 | LPAI ML SW Senior Engineer | Qualcomm | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4397274735/) |
+| 5 | Associate Data Scientist - Enterprise & Reporting | Circle K | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4395998184/) |
+| 6 | Software Engineer I, AI | Lyric | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4444880271/) |
+| 7 | Machine Learning Engineer | Solventum | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4445360131/) |
+| 8 | Machine Learning-AI and Data Science Engineer III | Deloitte | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4425098292/) |
+| 9 | Data Analyst | Hudson Data | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4444853549/) |
+| 10 | Associate Data Scientist, AI Engineering | Trinity Life Sciences | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4365330949/) |
+| 11 | Data Engineer | ANZ | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4445655750/) |
+| 12 | MLOps Engineer | Vestas | Chennai | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4427971581/) |
+| 13 | Senior Associate - GCP Data Engineer | Equinix | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4420137897/) |
+| 14 | Associate | PwC India | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4409098891/) |
+
+**Consulting/staffing/body-shop roles to skip:** **PwC India** (#14 — Big-4 Acceleration
+Center advisory delivery, generic "Associate" title with no ML/DS scope), **Deloitte**
+(#8 — Big-4 advisory), and **Trinity Life Sciences** (#10 — life-sciences consulting
+firm). **Hudson Data** (#9, Data Analyst) is also flagged as staffing/data-services-style
+rather than a direct product employer — role fit and company type both scored low for
+it. ANZ, Vestas, Solventum, Circle K, and Equinix were scored as "other corporate/GCC"
+(company type = 3, not 5) since these listings read as India Global Capability
+Centre/shared-services roles ("Data Engineer", "Senior Associate", generic ops titles)
+rather than each company's core product engineering — not consulting/body-shop, but not
+full product-company weight either.
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score are NARBA (#1), Scoutit (#2), LUXASIA (#3), Qualcomm (#4), and Circle K
+(#5). Checked existing `job-outreach` Gmail drafts first (35 on file after yesterday's
+run) — **LUXASIA and Circle K already had drafts** from the 2026-07-28 run. To keep the
+daily slate at 5 distinct, not-yet-contacted, non-consulting companies, outreach was
+drafted for the highest-ranked companies with no existing draft, walking down the full
+ranked list and skipping flagged consulting/GCC-ambiguous entries where a cleaner
+product-company option was available: **NARBA (#1), Scoutit (#2), Qualcomm (#4), Lyric
+(#6), and ANZ (#11)**. Note: two older, unlabeled drafts to Qualcomm recruiters exist
+from 2026-06-15 and 2026-05-30 (predating the `job-outreach` label convention) — since
+they weren't tagged `job-outreach`, Qualcomm was treated as not-yet-contacted under this
+log's tracking method, consistent with how prior days only check the labeled set.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| NARBA | Associate AI/ML Engineer: Generative AI Specialist | ML Engineer - Suryatej Lalam - NARBA | `careers@narba.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| Scoutit | AI/ML Engineer | ML Engineer - Suryatej Lalam - Scoutit | `careers@scoutit.io` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| Qualcomm | LPAI ML SW Senior Engineer | ML Engineer - Suryatej Lalam - Qualcomm | `careers@qualcomm.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Lyric | Software Engineer I, AI | ML Engineer - Suryatej Lalam - Lyric | `careers@lyric.ai` (placeholder — unverified, replace before sending) | new draft created this run |
+| ANZ | Data Engineer | ML Engineer - Suryatej Lalam - ANZ | `careers@anz.com` (placeholder — unverified, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` label (`Label_3`) was applied via `label_thread`
+using each new draft's `threadId` (looked up via `list_drafts` after creation) —
+succeeded for all 5 new drafts.
