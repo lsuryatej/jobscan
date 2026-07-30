@@ -1777,3 +1777,86 @@ log's tracking method, consistent with how prior days only check the labeled set
 **Note on labeling:** the `job-outreach` label (`Label_3`) was applied via `label_thread`
 using each new draft's `threadId` (looked up via `list_drafts` after creation) —
 succeeded for all 5 new drafts.
+
+## 2026-07-30
+
+**Search window:** last 48 hours (2026-07-28 → 2026-07-30)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`,
+`jobs-noreply@linkedin.com`) and Naukri (`naukri.com`, subject "job alert" /
+"recommended jobs"). **No Naukri job-alert emails were found in this window** — a direct
+`from:naukri.com newer_than:2d` search returned zero results.
+
+Raw emails scanned: 16 threads / 27 messages matched the search. Unlike 2026-07-29's
+single-job-per-email format, this window reverted to the multi-job digest format (each
+LinkedIn alert email contains one headline job plus several more job cards below it,
+separated by rule lines). Digest threads were re-parsed to pull every job card, not just
+the headline one used in the email subject — this surfaced far more candidate postings
+than the subject lines alone implied. One thread (Optum India, 6 messages) and one
+thread (PwC India "Associate", 4 messages) and one thread (Lyric, 3 messages) were
+resends of the same alert; a Scoutit posting also appeared across 2 threads. After
+extracting all job cards and deduping by Company + Role, **69 unique jobs** went into
+scoring.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | AI/ML Engineer – Gen AI & Data Science | M3AI PRIVATE LIMITED | Delhi, India | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444886100/) |
+| 2 | Associate AI/ML Engineer: Generative AI Specialist | NARBA | Noida | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444822533/) |
+| 3 | AI/ML Engineer | Scoutit | Delhi, India | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444838361/) |
+| 4 | Data Scientist / Machine Learning Engineer | Azuga, Inc. | Bangalore Urban | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445110049/) |
+| 5 | ML Operations Engineer | Signify | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445706151/) |
+| 6 | MLOps Engineer – Python | Impact Analytics | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445960714/) |
+| 7 | MLOPS ENGINEER – PYTHON | TechnoIogy@IA | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443215621/) |
+| 8 | Machine Learning Engineer, Evaluation | HackerRank | Bengaluru East | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4398897010/) |
+| 9 | Applied AI ML Associate Senior | JPMorganChase | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446192395/) |
+| 10 | Machine Learning Engineer II (Data & Audience Platform Team) | Warner Bros. Discovery | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4429039909/) |
+| 11 | Associate AI or ML Engineer | Optum India | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443010380/) |
+| 12 | AI/ML Engineer | Optum India | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446127766/) |
+| 13 | Sr Associate Data Scientist | Amgen | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4436960212/) |
+| 14 | AI Developer | HighRadius | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445126566/) |
+| 15 | Senior AI Engineer | Narrative Intelligence PVT. LTD. | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4442392301/) |
+| 16 | AI/ML Algorithm Engineer | Voltraniq Private Limited | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4442367484/) |
+| 17 | Senior AI Engineer | Teradata | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4397625919/) |
+| 18 | Associate AI/ML Engineer | Optum India | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446137709/) |
+| 19 | Data Scientist I | Honeywell Technologies | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445679023/) |
+| 20 | Machine Learning Engineer | Solventum | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445907254/) |
+
+**Consulting/staffing/body-shop roles to skip:** none of today's top 20 are flagged —
+the highest-ranked consulting-type postings this window (**Innova ESI** — IT staffing,
+**Zemoso Technologies** — dev-shop/consulting studio, **L.E.K. Consulting**, **EY**,
+**PwC India**, **Bain & Company**, **Accenture**, **TCS**, **Infosys**, **NTT DATA**,
+**Persistent Systems**, **KPI Partners**, **Parexel**, **iXceed Solutions**,
+**Intellectt Inc**, **Talentgigs**, **Jase HR Solutions**, **iThink Digital**,
+**Covetus**, **Straive**, **Hudson Data**) all scored low enough (company type = 2) to
+fall outside the top 20. **TechnoIogy@IA** (#7) is flagged separately: the company name
+came through the LinkedIn email garbled/mis-encoded and its real identity/domain
+couldn't be confirmed — treat this listing with caution and verify the actual employer
+before applying. **JPMorganChase** (#9), **Warner Bros. Discovery** (#10), **Optum
+India** (#11, #12, #18), **Amgen** (#13), and **Honeywell Technologies** (#19) were
+scored as "other corporate/GCC" (company type = 3) — large multinational corporates
+with India delivery-center-flavored roles, not body-shops but not full product-company
+weight either.
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score are M3AI (#1), NARBA (#2), Scoutit (#3), Azuga (#4), and Signify (#5).
+Checked existing `job-outreach` Gmail drafts first (40 on file after yesterday's run) —
+**NARBA, Scoutit, Warner Bros. Discovery, and Optum India already had drafts** from the
+2026-07-28/07-29 runs. To keep the daily slate at 5 distinct, not-yet-contacted,
+non-consulting companies, outreach was drafted for the highest-ranked companies with no
+existing draft, walking down the full ranked list: **M3AI (#1), Azuga (#4), Signify
+(#5), Impact Analytics (#6), and HackerRank (#8)**. TechnoIogy@IA (#7) was skipped for
+outreach given the unresolved/garbled company identity noted above.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| M3AI PRIVATE LIMITED | AI/ML Engineer – Gen AI & Data Science | ML Engineer - Suryatej Lalam - M3AI PRIVATE LIMITED | `careers@m3ai.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| Azuga, Inc. | Data Scientist / Machine Learning Engineer | ML Engineer - Suryatej Lalam - Azuga, Inc. | `careers@azuga.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Signify | ML Operations Engineer | ML Engineer - Suryatej Lalam - Signify | `careers@signify.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Impact Analytics | MLOps Engineer – Python | ML Engineer - Suryatej Lalam - Impact Analytics | `careers@impactanalytics.co` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| HackerRank | Machine Learning Engineer, Evaluation | ML Engineer - Suryatej Lalam - HackerRank | `careers@hackerrank.com` (placeholder — unverified, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` label (`Label_3`) was applied via `label_thread`
+using each new draft's `threadId` (looked up via `list_drafts` after creation) —
+succeeded for all 5 new drafts.
