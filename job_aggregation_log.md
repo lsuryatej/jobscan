@@ -1860,3 +1860,90 @@ outreach given the unresolved/garbled company identity noted above.
 **Note on labeling:** the `job-outreach` label (`Label_3`) was applied via `label_thread`
 using each new draft's `threadId` (looked up via `list_drafts` after creation) —
 succeeded for all 5 new drafts.
+
+## 2026-07-31
+
+**Search window:** last 48 hours (2026-07-29 → 2026-07-31)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`,
+`jobs-noreply@linkedin.com`) and Naukri (`naukri.com`, subject "job alert" /
+"recommended jobs"). **No Naukri job-alert emails were found in this window** — a direct
+`from:naukri.com newer_than:2d` search returned zero results.
+
+Raw emails scanned: 15 threads / 24 messages matched the search (12 distinct LinkedIn
+digest emails plus a Microsoft "jobs similar to" reminder and a Disney alert; one
+LinkedIn newsletter email with no job cards was excluded). Digest emails use the
+multi-job-card format (a headline job plus several more cards below it, separated by
+rule lines) — all cards were parsed, not just the headline job named in the subject.
+The Optum India alert thread had 6 duplicate-content messages and the PwC India
+"Associate" alert thread had 4; these were collapsed during Company+Role dedup. After
+extracting every job card and deduping by Company + Role, **52 unique jobs** went into
+scoring.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | AI Engineer (INDIA) | Trexquant Investment LP | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4317151751/) |
+| 2 | AI/ML Engineer – Gen AI & Data Science | M3AI PRIVATE LIMITED | Delhi, India | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444886100/) |
+| 3 | Sr. Lead/Sr. Engineer/Engineer – Enterprise Gen AI | Qualcomm | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4398119988/) |
+| 4 | AI Engineer Apprentice | Adobe | Bengaluru East | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445799105/) |
+| 5 | ML Operations Engineer | Signify | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445706151/) |
+| 6 | Quantitative Researcher - Early Career (INDIA) | Trexquant Investment LP | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4317149828/) |
+| 7 | Data Scientist / Machine Learning Engineer | Azuga, Inc. | Bangalore Urban | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445110049/) |
+| 8 | Machine Learning Engineer | Solventum | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445907254/) |
+| 9 | Machine Learning Engineer, Evaluation | HackerRank | Bengaluru East | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4398897010/) |
+| 10 | Senior Software Engineer | Microsoft AI | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444995819/) |
+| 11 | Senior Software Engineer - AI Data Platform | Apple | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4421796594/) |
+| 12 | Senior Software Developer, AI/ML | Autodesk | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4424085309/) |
+| 13 | AI Engineer | Welspun World | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445738407/) |
+| 14 | IN_ Associate_ Data Science + Gen AI_ Data Analytics_ Advisory_Gurgaon | PwC India | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445467743/) ⚠️ consulting/body-shop |
+| 15 | Data Scientist (Life Science) | Hiring Top MNC Company | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443242334/) ⚠️ consulting/body-shop |
+| 16 | Associate- PEG (AI Solutions Engineer) | Bain & Company | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4437122147/) ⚠️ consulting/body-shop |
+| 17 | Applied AI ML Associate Senior | JPMorganChase | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446192395/) |
+| 18 | Machine Learning & LLM Engineer | L.E.K. Consulting | Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4436061210/) ⚠️ consulting/body-shop |
+| 19 | Machine Learning Engineer II ( Data & Audience Platform Team), Hyderabad | Warner Bros. Discovery | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4429039909/) |
+| 20 | AI/ML Engineer | Optum India | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446127766/) |
+
+**Consulting/staffing/body-shop roles to skip:** **PwC India** (#14), **"Hiring Top MNC
+Company"** (#15 — a recruiting-agency-style masked listing; real employer unconfirmed,
+treat with extra caution), **Bain & Company** (#16), and **L.E.K. Consulting** (#18) are
+flagged inside today's top 20. Also scored low enough (company type = 2) to fall outside
+the top 20: **EY**, **Zemoso Technologies** (dev-shop/consulting studio), **Straive**,
+**Sealcube Secops**, **IQVIA**, **Parexel**, **Persistent Systems**, **KPI Partners**,
+**Weekday (YC W21)** (recruiting-agency posting, not the actual employer), **Intellectt
+Inc**, **Talentgigs**, **iXceed Solutions**, **Innova ESI**, and **Jase HR Solutions** —
+all IT-staffing/BPO/consulting firms. **Qualcomm** (#3, Enterprise Gen AI role) scored
+company type = 5 as a genuine chip/product company, but a second Qualcomm posting
+("Engineer - Camera Systems (3A)") was excluded from the top 20 on role fit alone
+(hardware role, off-target). **JPMorganChase** (#17), **Warner Bros. Discovery** (#19),
+and **Optum India** (#20) were scored as "other corporate/GCC" (company type = 3) —
+large multinational corporates with India delivery-center-flavored roles, not
+body-shops but not full product-company weight either; the same treatment was applied
+to **TMUS Global Solutions** and **LPL Financial Global Capability Center** (both
+explicitly GCC-named) and to **Volvo Group**, **Philips**, **Ericsson**, **Welspun
+World**, and **Honeywell Technologies**, which kept them out of today's top 20.
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score are Trexquant Investment LP (#1), M3AI PRIVATE LIMITED (#2), Qualcomm
+(#3), Adobe (#4), and Signify (#5). Checked existing `job-outreach` Gmail drafts first —
+**Trexquant, M3AI, Qualcomm, Signify, Azuga, Solventum, HackerRank, Microsoft, Apple,
+Warner Bros. Discovery, Optum India, LPL Financial, and Philips already had drafts**
+from prior runs (Trexquant alone has 4 dating back to 2026-05-29/06-19, predating the
+`job-outreach` label convention). To keep the daily slate at 5 distinct, not-yet-
+contacted, non-consulting companies, outreach was drafted for the highest-ranked
+companies with no existing draft, walking down the full ranked list: **Adobe (#4),
+Autodesk (#12), Welspun World (#13), TMUS Global Solutions (#21), and Volvo Group
+(#24)**.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| Adobe | AI Engineer Apprentice | ML Engineer - Suryatej Lalam - Adobe | `careers@adobe.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Autodesk | Senior Software Developer, AI/ML | ML Engineer - Suryatej Lalam - Autodesk | `careers@autodesk.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Welspun World | AI Engineer | ML Engineer - Suryatej Lalam - Welspun World | `careers@welspun.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| TMUS Global Solutions | Engineer AI [T500-27882] | ML Engineer - Suryatej Lalam - TMUS Global Solutions | `careers@tmusglobalsolutions.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| Volvo Group | Associate Data and AI Engineer | ML Engineer - Suryatej Lalam - Volvo Group | `careers@volvogroup.com` (placeholder — unverified, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` label (`Label_3`) was applied via `label_thread`
+using each new draft's `threadId` (looked up via `list_drafts` after creation) —
+succeeded for all 5 new drafts.
