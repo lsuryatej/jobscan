@@ -1947,3 +1947,90 @@ Autodesk (#12), Welspun World (#13), TMUS Global Solutions (#21), and Volvo Grou
 **Note on labeling:** the `job-outreach` label (`Label_3`) was applied via `label_thread`
 using each new draft's `threadId` (looked up via `list_drafts` after creation) —
 succeeded for all 5 new drafts.
+
+## 2026-08-01
+
+**Search window:** last 48 hours (2026-07-30 → 2026-08-01)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`,
+`jobs-noreply@linkedin.com`) and Naukri (`naukri.com`, subject "job alert" /
+"recommended jobs"). **No Naukri job-alert emails were found in this window** — a direct
+`from:naukri.com newer_than:2d` search returned zero results.
+
+Raw emails scanned: 8 distinct LinkedIn digest/alert threads (14 messages total — the
+"Associate AI/ML Engineer at Optum India" alert had 5 duplicate-content messages in one
+thread, and "Junior Applied AI Engineer at SpotDraft" had 2; both collapsed during dedup).
+One LinkedIn email (`editors-noreply@linkedin.com`, "Suryatej, land your next job") was a
+newsletter with no job cards and was excluded. Digest emails use the multi-job-card format
+(a headline job plus several more cards below it, separated by rule lines) — all cards
+were parsed from plaintext, not just the headline job named in the subject. After
+extracting every job card and deduping by Company + Role, **55 unique jobs** went into
+scoring.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | AI Engineer | Honasa Consumer Ltd. | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4444545191/) |
+| 2 | Artificial Intelligence Engineer | Trademo | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4444557664/) |
+| 3 | AI Engineer (INDIA) | Trexquant Investment LP | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4317151751/) |
+| 4 | Applied Scientist, Amazon Music - Catalog Quality | Amazon Science | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4446748118/) |
+| 5 | Data Scientist / Machine Learning Engineer | Azuga, Inc. | Bangalore Urban | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4445110049/) |
+| 6 | Junior Applied AI Engineer | SpotDraft | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4446810058/) |
+| 7 | Machine Learning Scientist - II | Wayfair | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4429623173/) |
+| 8 | Applied Scientist, Forecasting | Zillow | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4419446278/) |
+| 9 | Quantitative Researcher | Mathisys | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4446720540/) |
+| 10 | Quantitative Researcher - Early Career (INDIA) | Trexquant Investment LP | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4317149828/) |
+| 11 | Senior Analyst-Data Science (Machine Learning/AI & GenAI) | American Express | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4446421826/) |
+| 12 | Jr. AI Backend Engineer | CittaAI | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4444560690/) |
+| 13 | AI Solutions Engineer / AI Automation Engineer | Myfinser | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4446419296/) |
+| 14 | AI Data Scientist | Amgen | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4437811464/) |
+| 15 | Data Scientist | Optum India | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4446869373/) |
+| 16 | AI Engineer | Welspun World | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4445738407/) |
+| 17 | Data Scientist (Life Science) | Hiring Top MNC Company | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4443242334/) ⚠️ consulting/body-shop |
+| 18 | AI Engineer | HuntingCube | Bawana | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4446821851/) ⚠️ consulting/body-shop |
+| 19 | Machine Learning & LLM Engineer | L.E.K. Consulting | Delhi | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4436061210/) ⚠️ consulting/body-shop |
+| 20 | IN_ Associate_ Data Science + Gen AI_ Data Analytics_ Advisory_Gurgaon | PwC India | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/comm/jobs/view/4445467743/) ⚠️ consulting/body-shop |
+
+**Consulting/staffing/body-shop roles to skip:** **"Hiring Top MNC Company"** (#17 — a
+masked, recruiting-agency-style listing; real employer unconfirmed, treat with extra
+caution), **HuntingCube** (#18 — small staffing/recruiting agency; the listed location,
+Bawana, is an industrial area of Delhi, not a typical office district, another
+staffing-agency tell), **L.E.K. Consulting** (#19), and **PwC India** (#20) are flagged
+inside today's top 20. Also scored low enough (company type = 2) to fall outside the top
+20: **Brillius Technologies** (small unverified dev/staffing shop), **Infosys** (large IT
+services/outsourcing), **Bain & Company**, **EXL** (two postings — analytics BPO/
+consulting), **Mercer** (HR/management consulting), **Radlabs Technologies Pvt. Ltd**
+(small unverified dev shop), **Straive** (data/BPO services), **Sealcube Secops**
+(security consulting), and **IQVIA** (CRO/pharma consulting). One listing, **Artificial
+Intelligence Officer at Suparshva Swabs (I)** (a surgical-swabs/medical-supplies
+manufacturer), looked like a possible company/role mismatch — flagged for manual
+verification rather than treated as a hard skip, and it scored low enough on role fit to
+land outside the top 20 anyway. Large corporates with India GCC/delivery-center-flavored
+roles — **Chubb**, **Ericsson**, **Honeywell Technologies**, **Optum India** (two more
+postings beyond #15), **Signify**, **Volvo Group**, **Philips** (two postings), **Target**
+(two postings), **GE Vernova**, and **Moody's Corporation** — were scored as "other
+corporate/GCC" (company type = 3): not body-shops, but not full product-company weight
+either, which kept them out of today's top 20.
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score are Honasa Consumer Ltd. (#1), Trademo (#2), Trexquant Investment LP (#3),
+Amazon Science (#4), and Azuga, Inc. (#5). Checked existing `job-outreach` Gmail drafts
+first — **all five already had drafts** from prior runs (Trexquant alone has 4, dating
+back to 2026-05-29; Amazon Science and American Express each have 2; Honasa, Azuga,
+Wayfair, Welspun World, Amgen, and Optum India each have 1). To keep the daily slate at 5
+distinct, not-yet-contacted, non-consulting companies, outreach was drafted for the
+highest-ranked companies with no existing draft, walking down the full ranked list:
+**SpotDraft (#6), Zillow (#8), Mathisys (#9), CittaAI (#12), and Myfinser (#13)**.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| SpotDraft | Junior Applied AI Engineer | ML Engineer - Suryatej Lalam - SpotDraft | `careers@spotdraft.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Zillow | Applied Scientist, Forecasting | ML Engineer - Suryatej Lalam - Zillow | `careers@zillow.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Mathisys | Quantitative Researcher | ML Engineer - Suryatej Lalam - Mathisys | `careers@mathisys.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| CittaAI | Jr. AI Backend Engineer | ML Engineer - Suryatej Lalam - CittaAI | `careers@cittaai.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+| Myfinser | AI Solutions Engineer / AI Automation Engineer | ML Engineer - Suryatej Lalam - Myfinser | `careers@myfinser.com` (placeholder — unverified domain, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` label (`Label_3`) was applied via `label_thread`
+using each new draft's `threadId` (looked up via `list_drafts` after creation) —
+succeeded for all 5 new drafts.
