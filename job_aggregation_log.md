@@ -2034,3 +2034,95 @@ highest-ranked companies with no existing draft, walking down the full ranked li
 **Note on labeling:** the `job-outreach` label (`Label_3`) was applied via `label_thread`
 using each new draft's `threadId` (looked up via `list_drafts` after creation) —
 succeeded for all 5 new drafts.
+
+## 2026-08-02
+
+**Search window:** last 48 hours (2026-07-31 → 2026-08-02)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`,
+`jobs-noreply@linkedin.com`) and Naukri (`naukri.com`, subject "job alert" /
+"recommended jobs"). **No Naukri job-alert emails were found in this window** — a direct
+`from:naukri.com newer_than:2d` search returned zero results.
+
+Raw emails scanned: 8 distinct LinkedIn digest/alert/reminder threads (10 messages total
+— "Associate AI or ML Engineer at Optum India" had 2 duplicate-content messages in one
+thread, and "Junior Applied AI Engineer at SpotDraft" had 2; both collapsed during
+dedup). One thread was a saved-job reminder ("apply now to 'AI & Automation Developer at
+Vanden Recycling'") rather than a fresh digest, but it still carried job cards so was
+parsed the same way. Digest emails use the multi-job-card format (a headline job plus
+several more cards below it, separated by rule lines, including "New jobs from your
+other alerts" sections keyed to secondary saved searches) — all cards were parsed from
+plaintext, not just the headline job named in the subject. After extracting every job
+card and deduping by Company + Role (LinkedIn job ID), **46 unique jobs** went into
+scoring.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | AI Engineer | Honasa Consumer Ltd. | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444545191/) |
+| 2 | Artificial Intelligence Engineer | Trademo | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444557664/) |
+| 3 | Artificial Intelligence Engineer | a21.ai | New Delhi | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445038057/) ⚠️ verify — small/unfamiliar company name |
+| 4 | AI Solutions Engineer / AI Automation Engineer | Myfinser | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446419296/) |
+| 5 | Jr. AI Backend Engineer | CittaAI | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444560690/) |
+| 6 | AI/ML Engineer | NationsBenefits | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444586701/) |
+| 7 | Jr AI/ML Engineer | NationsBenefits | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444581854/) |
+| 8 | Machine Learning Engineer | Fabric | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446967932/) ⚠️ verify — generic name, multiple companies called "Fabric" |
+| 9 | Senior Machine Learning Engineer | Siemens | Gurgaon, Haryana, India | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445163464/) |
+| 10 | Machine Learning Scientist - II | Wayfair | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4429623173/) |
+| 11 | Applied Scientist, Forecasting | Zillow | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4419446278/) |
+| 12 | Applied Scientist, Amazon Music - Catalog Quality | Amazon Science | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446748118/) |
+| 13 | Applied AI Engineer | HackerRank | Bengaluru East | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4417204290/) |
+| 14 | Data Scientist | Cloudflare | Bengaluru, Karnataka, India | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4425337888/) |
+| 15 | Data Scientist | RapidClaims | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446986285/) |
+| 16 | Associate AI or ML Engineer | Optum India | Noida | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4447097803/) |
+| 17 | Junior Applied AI Engineer | SpotDraft | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446810058/) |
+| 18 | Senior Analyst-Data Science (Machine Learning/AI & GenAI) | American Express | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446421826/) |
+| 19 | Quantitative Researcher | Mathisys | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446720540/) |
+| 20 | AI/ML Engineer | Cyfuture | Noida | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4430407175/) |
+
+**Consulting/staffing/body-shop roles to skip:** none scored high enough to land inside
+today's top 20, but several are worth flagging so they're skipped fast if seen in the
+inbox: **Aadhar Stumbh IT LLP** ("Artificial Intelligence Engineer", Delhi — the "IT LLP"
+naming pattern is a staffing-shop tell), **Accenture in India** ("AI / ML Engineer",
+Gurugram — classic outsourcing/consulting major), **WNS** ("Data Scientist", Gurugram —
+BPO/analytics outsourcing), **UST** ("ML Engineer I", Bengaluru — IT services), **Softkode
+Technologies** ("Data Scientist", New Delhi — small unverified dev/staffing shop),
+**Brillius Technologies** ("AI Engineer", Hyderabad — small unverified dev/staffing shop),
+**Infosys** ("Junior AI Engineer", Bengaluru East — large IT services/outsourcing), and
+**EXL** (two postings — "C1 - Modelling" and "C1 - Credit Risk Modeler", both Gurugram —
+analytics BPO/consulting). **HuntingCube** ("AI Engineer", Bawana) is a small
+staffing/recruiting agency — the listed location, Bawana, is an industrial area of Delhi
+rather than a typical office district, another staffing-agency tell; it scored a
+literal 12 (Delhi location = 5) but is flagged here as a skip regardless of score.
+Two listings are flagged for **manual verification rather than a hard skip**: **a21.ai**
+(#3) and **Fabric** (#8) — both are real-looking product/startup names but too generic
+or unfamiliar to confirm from the email alone; verify the company before applying or
+before sending the drafted outreach below. Large corporates with India GCC/delivery-
+center-flavored roles — **Vanden Recycling**, **Nielsen**, **JPMorganChase**, **Deutsche
+Bank**, **Honeywell Technologies**, **Optum India** (one more posting beyond #16, Data
+Scientist in Hyderabad), **Cisco**, **GEA Group**, **NexBase**, **GE Vernova**, **Chubb**,
+**Moody's Corporation**, **Take-Two Interactive**, **JB Group of Companies**, and
+**Nokia** — were scored as "other corporate/GCC" or off-target role fit, which kept them
+out of today's top 20.
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 by score are Honasa Consumer Ltd. (#1), Trademo (#2), a21.ai (#3), Myfinser (#4),
+and CittaAI (#5). Checked existing `job-outreach` Gmail drafts first — **Myfinser and
+CittaAI already had drafts** from the 2026-08-01 run. To keep the daily slate at 5
+distinct, not-yet-contacted, non-consulting companies, outreach was drafted for the
+highest-ranked companies with no existing draft, walking down the full ranked list:
+**Honasa Consumer Ltd. (#1), Trademo (#2), a21.ai (#3), NationsBenefits (#6/#7, one draft
+for the company), and Fabric (#8)**.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| Honasa Consumer Ltd. | AI Engineer | ML Engineer - Suryatej Lalam - Honasa Consumer Ltd. | `careers@honasa.in` (placeholder — unverified, replace before sending) | new draft created this run |
+| Trademo | Artificial Intelligence Engineer | ML Engineer - Suryatej Lalam - Trademo | `careers@trademo.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| a21.ai | Artificial Intelligence Engineer | ML Engineer - Suryatej Lalam - a21.ai | `careers@a21.ai` (placeholder — unverified domain; company identity unconfirmed, verify before sending) | new draft created this run |
+| NationsBenefits | AI/ML Engineer | ML Engineer - Suryatej Lalam - NationsBenefits | `careers@nationsbenefits.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Fabric | Machine Learning Engineer | ML Engineer - Suryatej Lalam - Fabric | `careers@fabric.inc` (placeholder — unverified domain; multiple companies share this name, verify before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` label (`Label_3`) was applied via `label_thread`
+using each new draft's `threadId` (looked up via `list_drafts` after creation) —
+succeeded for all 5 new drafts.
