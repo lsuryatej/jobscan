@@ -2126,3 +2126,98 @@ for the company), and Fabric (#8)**.
 **Note on labeling:** the `job-outreach` label (`Label_3`) was applied via `label_thread`
 using each new draft's `threadId` (looked up via `list_drafts` after creation) —
 succeeded for all 5 new drafts.
+
+
+## 2026-08-04
+
+**Pipeline gap note:** the previous log entry was dated 2026-08-02 — the routine appears
+to have skipped 2026-08-03 (2 days stale as of this run). This run covers a fuller
+48-hour window to catch anything that would otherwise have been missed.
+
+**Search window:** last 48 hours (2026-08-02 → 2026-08-04)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`,
+`jobs-noreply@linkedin.com`) and Naukri (`naukri.com`, subject "job alert" /
+"recommended jobs"). **No Naukri job-alert emails were found in this window** — a direct
+`from:naukri.com newer_than:2d` search returned zero results.
+
+Raw emails scanned: 6 distinct LinkedIn threads (8 messages total — the "Applied AI ML
+Associate at JPMorganChase" alert fired 3 separate digest emails within the window, all
+parsed). One thread ("Suryatej, apply to Senior Machine Learning Engineer at Siemens and
+more", a weekly saved-jobs reminder template) carried no job cards in its body — only a
+preheader mention of the Siemens role already known from the 2026-08-02 run — so it
+contributed no new listings beyond confirming that role is still open. Digest emails use
+the multi-job-card format (a headline job plus several more cards below it, including
+"New jobs from your other alerts" sections keyed to secondary saved searches) — all cards
+were parsed from plaintext, not just the headline job named in the subject. After
+extracting every job card and deduping by Company + Role (LinkedIn job ID, collapsing one
+"Data Scientist, Google Ads" @ Google posting that appeared for both Gurugram and
+Bengaluru), **34 unique jobs** went into scoring.
+
+### Ranked Top 20
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | AI Engineer, Portfolio Management Group, Associate | BlackRock | Gurgaon | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4438637224/) |
+| 2 | AI/ML Analyst | Citi | Haryana, India | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4447479954/) |
+| 3 | Data Scientist, Google Ads | Google | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4447173955/) (also posted for Bengaluru, job 4447191092) |
+| 4 | Senior Machine Learning Engineer | Siemens | Gurgaon | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445163464/) |
+| 5 | Associate Data Scientist (Commercial) | Amgen | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4447809489/) |
+| 6 | Senior AI Engineer | Teradata | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4402139915/) |
+| 7 | Agentic AI Engineer | Spore N Sprouts | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4447836947/) ⚠️ verify — small/unfamiliar company name |
+| 8 | Applied AI Engineer | Convatec | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439091242/) |
+| 9 | Data Science Associate | The Depository Trust & Clearing Corporation (DTCC) | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439046946/) |
+| 10 | Applied AI ML Associate | JPMorganChase | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4447746545/) |
+| 11 | Applied AI ML Associate Senior - AI Engineer | JPMorganChase | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4447588411/) |
+| 12 | Associate Engineer - AI/ML with Python | HARMAN India | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4412930013/) |
+| 13 | Machine Learning Engineer - L3 | RZR | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4411227981/) |
+| 14 | Data Scientist 1, Knowledge Management | eBay | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4445544077/) |
+| 15 | ML Engineer I | UST | Noida | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4361810648/) ⚠️ consulting/IT services — skip fast |
+| 16 | Compliance Engineering - Neon Platform - Associate | Goldman Sachs | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4379689055/) |
+| 17 | Software Engineer - Modelzoo | NXP Semiconductors | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4389705912/) |
+| 18 | AI Engineer, Portfolio Management Group, Associate | BlackRock | Mumbai Metropolitan Region | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4438619979/) |
+| 19 | Data Science Research Senior Analyst | Accenture in India | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439378798/) ⚠️ consulting — skip fast |
+| 20 | Data Scientist | Optum India | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4447588660/) |
+
+**Consulting/staffing/body-shop roles to skip:** two make today's top 20 anyway (UST #15,
+Accenture in India #19 — flagged above, scores earned the slot but treat as skip-fast).
+Below the cutoff, worth flagging so they're skipped fast if seen in the inbox:
+**Virtusa** ("GEN AI", Chennai — IT services/consulting), **IBM** ("Data Engineer-Data
+Platforms-Google", Bengaluru — India roles here skew services/GBS), **Quest Global** ("AI
+Engineer", Bengaluru — engineering services/consulting), **Impetus** ("GCP_GenAI_SSE",
+Bengaluru — data engineering consulting shop, despite the GCP/GenAI stack match), **Bain
+& Company** ("Associate – Data Ops & Estimations", Gurugram — classic consulting), and
+**Firstsource** ("Senior Software Engineer", Hyderabad — BPO/outsourcing). Two listings
+are recruiting/staffing agencies and were excluded from the ranked table entirely
+regardless of score, same treatment as prior runs: **Talentgigs** ("Agentic AI Engineer",
+Hyderabad — the name itself is a staffing-agency tell) and **HuntingCube** ("AI
+Engineer", Bawana — Bawana is an industrial area of Delhi rather than a typical office
+district, another staffing-agency tell; this is the same company flagged in the
+2026-08-02 run). Large corporates with generic/off-target roles — **Google** ("Engineering
+Analyst, Trust and Safety, YouTube", Hyderabad), **Rippling** ("Software Engineer II -
+Data Catalog", Bengaluru), **Cisco** ("Data Engineer", Bengaluru), **HSBC** ("Analyst-
+Data Engineering", Bengaluru), and **JPMorganChase** ("Software Engineer II - Python",
+Hyderabad) — scored too low on role fit (data engineering / generic SWE, not core
+ML/applied-AI) to make today's top 20.
+
+### Top 5 companies → cold outreach drafts
+
+Top 5 distinct companies by score, walking the ranked list: BlackRock (#1), Citi (#2),
+Google (#3), Siemens (#4), Amgen (#5). Checked existing `job-outreach` Gmail drafts
+first — **Citi (drafted 2026-07-25) and Amgen (drafted 2026-07-25) already had
+outreach**, so both were skipped to keep the slate at 5 distinct, not-yet-contacted
+companies. Continued down the ranked list, skipping Spore N Sprouts (#7, flagged above
+for identity verification — didn't want to draft outreach to an unconfirmed company) in
+favor of the next verified, non-consulting company with no existing draft: **BlackRock
+(#1), Google (#3), Siemens (#4), Teradata (#6), and Convatec (#8)**.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| BlackRock | AI Engineer, Portfolio Management Group, Associate | ML Engineer - Suryatej Lalam - BlackRock | `careers@blackrock.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Google | Data Scientist, Google Ads | ML Engineer - Suryatej Lalam - Google | `careers@google.com` (placeholder — unverified; Google does not accept unsolicited applications at this address, replace before sending) | new draft created this run |
+| Siemens | Senior Machine Learning Engineer | ML Engineer - Suryatej Lalam - Siemens | `careers@siemens.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Teradata | Senior AI Engineer | ML Engineer - Suryatej Lalam - Teradata | `careers@teradata.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Convatec | Applied AI Engineer | ML Engineer - Suryatej Lalam - Convatec | `careers@convatec.com` (placeholder — unverified, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` label (`Label_3`) was applied via `label_thread`
+using each new draft's `threadId` (looked up via `list_drafts` after creation) —
+succeeded for all 5 new drafts.
