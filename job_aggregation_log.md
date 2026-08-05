@@ -2221,3 +2221,91 @@ favor of the next verified, non-consulting company with no existing draft: **Bla
 **Note on labeling:** the `job-outreach` label (`Label_3`) was applied via `label_thread`
 using each new draft's `threadId` (looked up via `list_drafts` after creation) —
 succeeded for all 5 new drafts.
+
+## 2026-08-05
+
+**Search window:** last 48 hours (2026-08-03 → 2026-08-05)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`,
+`jobs-noreply@linkedin.com`) and Naukri (`from:naukri.com newer_than:2d`). **No Naukri
+job-alert emails were found in this window** — same as every prior run.
+
+**Volume note:** only 7 distinct threads matched in the 48-hour window (one, "don't miss
+your exclusive Premium events," was a LinkedIn marketing email, not a job alert). Of the
+remaining 6 job-alert threads, **4 were the same digests already parsed in the 2026-08-04
+run** (the "ml platform engineer," "applied scientist," and "mlops engineer" alert digests
+carrying BlackRock ×2, Citi, HARMAN, UST, RZR, Virtusa, Google Trust & Safety — all dated
+2026-08-03 and already scored/logged yesterday), plus the weekly "Suryatej, apply to
+Senior Machine Learning Engineer at Siemens and more" reminder, which again carried no job
+cards in its body (same as 2026-08-04). Re-listing those in today's ranked table would
+just be yesterday's table again, so they're excluded here as duplicates rather than
+re-scored. That left **2 genuinely new threads**: a "Jobs that match your profile" digest
+(6 job cards, headlined by Warner Bros. Discovery) and a 4×-resent "machine learning
+engineer in Gurugram" alert (which itself bundled 7 more cards across its primary and
+"other alerts" sections, headlined by HYrEzy Tech Solutions). After extracting every card
+from those 2 threads and deduping by Company + Role (collapsing one "Engineering Graduate
+Associate" @ LSEG posting that appeared for both Hyderabad and Bengaluru), **12 unique new
+jobs** went into scoring.
+
+### Ranked Top 12 (fewer than 20 available this run — see volume note above)
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | Data Scientist (Fintech / Applied ML) | HYrEzy Tech Solutions | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4447905095/) ⚠️ verify — small/unfamiliar company |
+| 2 | Data Science Builder | Cars24 | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4447908498/) |
+| 3 | Machine Learning Engineer II (Data & Audience Platform Team) | Warner Bros. Discovery | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4429039909/) |
+| 4 | Deputy Manager - Data Science | PepsiCo | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4390003782/) |
+| 5 | Artificial Intelligence Engineer | Solis Technology | Gurugram | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446056277/) ⚠️ verify — unfamiliar company name |
+| 6 | AI/ML Engineer | Optum India | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446127766/) |
+| 7 | Associate AI or ML Engineer | Optum India | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4443010380/) |
+| 8 | Software Engineer - AI/ML | ValGenesis | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4444923128/) |
+| 9 | Engineering Graduate Associate | LSEG | Hyderabad (also posted Bengaluru, job 4447667532) | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4447655794/) |
+| 10 | AI/ML Engineer | Optum India | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4448132424/) |
+| 11 | Gen AI-AI and Data Science Engineer III | Deloitte | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4425075810/) ⚠️ consulting — skip fast |
+| 12 | GEN AI Developer | Birlasoft | Greater Hyderabad Area | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439874927/) ⚠️ consulting/IT services — skip fast |
+
+**Consulting/staffing/body-shop roles to skip:** two make today's list anyway (Deloitte
+#11, Birlasoft #12 — flagged above, treat as skip-fast). No recruiting/staffing agencies
+turned up in the 2 new threads this run.
+
+**Already reported yesterday (excluded from the table above, not re-scored):** BlackRock
+— AI Engineer, Portfolio Management Group, Associate (Gurgaon + Mumbai), Citi — AI/ML
+Analyst (Haryana), HARMAN India — Associate Engineer AI/ML with Python (Bengaluru), UST —
+ML Engineer I (Noida, consulting), RZR — Machine Learning Engineer L3 (Bengaluru),
+Virtusa — GEN AI (Chennai, consulting), Google — Engineering Analyst, Trust and Safety,
+YouTube (Hyderabad, off-target). All were already scored and logged in the 2026-08-04
+entry above.
+
+### Top 5 companies → cold outreach drafts
+
+Only **2 of the 12 new jobs** led to a fresh outreach draft — walking the ranked list and
+applying the same filters as every prior run quickly exhausted the candidates:
+- **#1 HYrEzy Tech Solutions** and **#5 Solis Technology** — skipped, unfamiliar/unverified
+  companies (same policy as Spore N Sprouts on 2026-08-04).
+- **#3 Warner Bros. Discovery** — skipped, already has a `job-outreach` draft
+  (`careers@wbd.com`, created 2026-07-24).
+- **#6/#7/#10 Optum India** — skipped, already has a `job-outreach` draft
+  (`careers@optum.com`, created 2026-07-24).
+- **#8 ValGenesis** — skipped, already has a `job-outreach` draft (created 2026-07-27).
+- **#9 LSEG** — skipped, already has a `job-outreach` draft (`careers@lseg.com`, created
+  2026-07-23).
+- **#11 Deloitte, #12 Birlasoft** — skipped, consulting/IT services.
+
+That leaves only **Cars24 (#2) and PepsiCo (#4)** as valid, not-yet-contacted, non-
+consulting targets from today's new listings — the slate is 2 instead of 5 this run
+because the inbox simply didn't surface 5 fresh candidates that clear every filter.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| Cars24 | Data Science Builder | ML Engineer - Suryatej Lalam - Cars24 | `careers@cars24.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| PepsiCo | Deputy Manager - Data Science | ML Engineer - Suryatej Lalam - PepsiCo | `careers@pepsico.com` (placeholder — unverified, replace before sending) | new draft created this run |
+
+**⚠️ PepsiCo duplicate-draft flag:** a search for existing PepsiCo outreach turned up a
+prior draft to `talent@pepsico.com` (created 2026-07-12, same Deputy Manager - Data
+Science / Gurugram role) that does **not** carry the `job-outreach` label, so it wasn't
+caught by the label-based dedup check this run used. Both drafts now exist — recommend
+deleting one (or merging) before sending to avoid double outreach to the same recruiter
+pipeline.
+
+**Note on labeling:** the `job-outreach` label (`Label_3`) was applied via `label_thread`
+using each new draft's `threadId` (looked up via `list_drafts` after creation) —
+succeeded for both new drafts.
