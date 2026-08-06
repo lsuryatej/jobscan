@@ -2309,3 +2309,98 @@ pipeline.
 **Note on labeling:** the `job-outreach` label (`Label_3`) was applied via `label_thread`
 using each new draft's `threadId` (looked up via `list_drafts` after creation) —
 succeeded for both new drafts.
+
+## 2026-08-06
+
+**Search window:** last 48 hours (2026-08-04 → 2026-08-06)
+**Sources searched:** LinkedIn job alert emails (`jobalerts-noreply@linkedin.com`, digest
+subject pattern "X is hiring: Y") and Naukri (`naukri.com`, subject "job alert" /
+"recommended jobs"). **No Naukri job-alert emails were found in this window** — same as
+every prior run.
+
+**Volume note:** 5 distinct LinkedIn job-alert digest emails matched the window (Nielsen,
+Crimson Energy Experts, lululemon, American Express, and a repeat WBD "jobs picked for
+you" board), each carrying 1 headline job plus a "New jobs from your other alerts"
+secondary list. Also present but excluded as noise: 17 individual "your application was
+sent to X" confirmation emails (not job alerts) and 1 LinkedIn Premium marketing email.
+Parsing all 5 digest bodies yielded 28 unique job cards after deduping by Company + Role.
+
+**Already reported in prior runs (excluded from today's table, not re-scored):** Warner
+Bros. Discovery — Machine Learning Engineer II (same job ID, reported since 2026-07-20,
+has outreach draft), Optum India — AI/ML Engineer and Associate AI or ML Engineer
+(Hyderabad, same job IDs as 2026-08-05), Deloitte — Gen AI-AI and Data Science Engineer
+III (same job ID as 2026-08-05, consulting), Birlasoft — GEN AI Developer (same job ID
+as 2026-08-05, consulting), ValGenesis — Software Engineer - AI/ML (same job ID as
+2026-08-05, has outreach draft), American Express — Analyst-Data Science (same job ID as
+several prior runs, has outreach draft), FedEx — Data Scientist 1 (same job ID as
+2026-07-24 run). That leaves 21 new postings, further deduped to 2 near-duplicate
+Accenture "AI / ML Engineer" (Bengaluru) postings down to 1, for 18 net new candidates
+below.
+
+### Ranked Top 18
+
+(Only 18 net-new, not-already-reported postings turned up in this window — reported as-is
+rather than padding to 20.)
+
+| Rank | Job Title | Company | Location | Source | Apply Link |
+|---|---|---|---|---|---|
+| 1 | Associate AI/ML Engineer | Optum India | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4448803708/) |
+| 2 | AI Engineer | Teradata | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4448218072/) |
+| 3 | AI Engineer | Teradata | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4448210227/) |
+| 4 | Machine Learning Engineer 2 | Adobe | Bengaluru East | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4439169182/) |
+| 5 | AI / ML Engineer | GoodScore | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4448185727/) |
+| 6 | Applied AI/ML Scientist [T500-28135] | lululemon | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4448173947/) |
+| 7 | Applied Scientist, Alexa International Tech | Amazon | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4448319209/) |
+| 8 | Junior MLOps Engineer | Alegeus | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4447930211/) |
+| 9 | AI / ML Data Scientist I | Nielsen | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446620362/) |
+| 10 | Computer Vision Engineer | Crimson Energy Experts Pvt Ltd | Delhi, India | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4448265881/) ⚠️ verify — small/unfamiliar company |
+| 11 | MLOps Engineer | NStarX | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4448174820/) ⚠️ verify — unfamiliar company, possible boutique AI consultancy |
+| 12 | Applied AI ML Associate Senior-Data Engineer | JPMorganChase | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4448194733/) |
+| 13 | Data Scientist-Artificial Intelligence | IBM | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446233811/) |
+| 14 | Software Engineer | Microsoft | Hyderabad | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4448191323/) |
+| 15 | AI / ML Engineer | Accenture in India | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4448327708/) ⚠️ consulting — skip fast |
+| 16 | Data Scientist | Deloitte | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4446283575/) ⚠️ consulting — skip fast |
+| 17 | Machine Learning, Associate, WM Admin, Wealth Management | Morgan Stanley | Mumbai | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4448288477/) |
+| 18 | Data Engineer | Accenture in India | Bengaluru | LinkedIn | [Apply](https://www.linkedin.com/jobs/view/4448371557/) ⚠️ consulting — skip fast |
+
+**Consulting/staffing/body-shop roles to skip:** Accenture in India (#15, #18) and
+Deloitte (#16) — flagged above, treat as skip-fast. IBM (#13) is scored as "other
+corporate/GCC" (company type = 3) rather than pure product, since the listing may sit
+inside IBM Consulting rather than IBM's product/research org — worth a quick check before
+applying, though not a hard skip.
+
+**Unverified/small-company flags:** Crimson Energy Experts Pvt Ltd (#10) and NStarX
+(#11) are unfamiliar names with no public footprint checked — verify legitimacy and
+comp band before applying, same policy as HYrEzy Tech Solutions and Solis Technology in
+the 2026-08-05 run.
+
+### Top 5 companies → cold outreach drafts
+
+Only **3 of 18** ranked jobs led to a fresh outreach draft — walking the ranked list and
+checking existing Gmail drafts (`list_drafts` search, confirmed via draft recipient
+addresses) exhausted the non-duplicate, non-consulting, verified candidates before
+reaching 5:
+- **#1 Optum India, #2/#3 Teradata, #4 Adobe, #5 GoodScore, #7 Amazon, #8 Alegeus, #9
+  Nielsen, #12 JPMorganChase, #14 Microsoft** — all skipped, confirmed existing
+  `job-outreach` drafts on file (`careers@optum.com`, `careers@teradata.com`,
+  `careers@adobe.com`, `careers@goodscore.in`, `careers@amazon.com`,
+  `careers@alegeus.com`, `careers@nielsen.com`, JPMorgan's India recruiting address, and
+  `careers@microsoft.com` respectively).
+- **#10 Crimson Energy Experts, #11 NStarX** — skipped, unverified/unfamiliar companies
+  (see flag above).
+- **#15, #16, #18 Accenture in India / Deloitte** — skipped, consulting/IT services.
+
+That left **lululemon (#6), IBM (#13), and Morgan Stanley (#17)** as the only valid,
+not-yet-contacted, non-consulting, verified targets from today's new listings — the slate
+is 3 instead of 5 this run because the top of the ranked list is dominated by companies
+already worked through in prior runs.
+
+| Company | Role targeted | Draft subject | Recipient in draft | Status |
+|---|---|---|---|---|
+| lululemon | Applied AI/ML Scientist | ML Engineer - Suryatej Lalam - lululemon | `careers@lululemon.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| IBM | Data Scientist-Artificial Intelligence | ML Engineer - Suryatej Lalam - IBM | `careers@ibm.com` (placeholder — unverified, replace before sending) | new draft created this run |
+| Morgan Stanley | Machine Learning, Associate, WM Admin, Wealth Management | ML Engineer - Suryatej Lalam - Morgan Stanley | `careers@morganstanley.com` (placeholder — unverified, replace before sending) | new draft created this run |
+
+**Note on labeling:** the `job-outreach` label (`Label_3`) was applied via `label_thread`
+using each new draft's `threadId` (looked up via `list_drafts` after creation) —
+succeeded for all three new drafts.
